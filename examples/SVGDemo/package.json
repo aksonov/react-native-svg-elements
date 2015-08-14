@@ -1,5 +1,5 @@
 {
-  "name": "AddressbookDemo",
+  "name": "SvgDemo",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "react-native": "^0.8.0",
-    "react-native-addressbook": "^1.1.5",
+    "react-native-svg-elements": "0.0.1",
     "react-timer-mixin": "^0.13.2"
   }
 }
