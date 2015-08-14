@@ -1,0 +1,24 @@
+{
+  "name": "react-native-svg-elements",
+  "version": "0.0.1",
+  "description": "ReactNative SVG elements using SVGgh library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aksonov/react-native-svg-elements.git"
+  },
+  "keywords": [
+    "react-native",
+    "SVG",
+    "SVGgh"
+  ],
+  "author": "Pavlo Aksonov <akso.nov@gmail.com> (http://aksonov.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aksonov/react-native-svg-elements/issues"
+  },
+  "homepage": "https://github.com/aksonov/react-native-svg-elements#readme"
+}

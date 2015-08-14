@@ -1,17 +1,3 @@
-# React Native SVG Elements
-Use React Native to draw SVG Elements.
-
-## Supported SVG Elements
-- Path
-- Use
-- Defs
-- Mask
-- LinearGradient
-- G
-
-##Example
-Draw Sine function
-```js
 'use strict';
 
 function drawSine(t) {
@@ -35,7 +21,7 @@ var {
   View,
 } = React;
 
-var {Svg, Path} = require('react-native-svg-elements');
+var {Svg,Path} = require('react-native-svg-elements');
 var TimerMixin = require('react-timer-mixin');
 
 var Wave = React.createClass({
@@ -66,19 +52,4 @@ var Wave = React.createClass({
   }
 });
 
-```
-
-## Getting started
-1. `npm install react-native-svg-elements --save`
-2. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-3. add `./node_modules/react-native-svg-elements/RCTSvg.xcodeproj`
-4. In the XCode project navigator, select your project, select the `Build Phases` tab and in the `Link Binary With Libraries` section add **libRCTSvg.a**
-5. `var Svg = require('react-native-svg-elements'); var Path = Svg.Path`
-
-## Todo
-- [ ] Support <Rect>
-- [ ] Support <Text>
-
-## Credits
-Thanks to @GenerallyHelpfulSoftware for SVG rendering library (https://github.com/GenerallyHelpfulSoftware/SVGgh).
-Thanks to @brentvatne for React Native SVG library (https://github.com/brentvatne/react-native-svg) examples given from.
+module.exports = Wave;
