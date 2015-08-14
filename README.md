@@ -76,8 +76,8 @@ var Wave = React.createClass({
 5. `var Svg = require('react-native-svg-elements'); var Path = Svg.Path`
 
 ## Todo
-- [ ] Support <Rect>
-- [ ] Support <Text>
+- [ ] Support Rect
+- [ ] Support onPress and other events
 
 ## Credits
 Thanks to @GenerallyHelpfulSoftware for SVG rendering library (https://github.com/GenerallyHelpfulSoftware/SVGgh).
