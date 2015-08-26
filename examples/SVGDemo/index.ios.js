@@ -23,6 +23,9 @@ class SvgExample extends React.Component {
     //},
     //
     //
+    render4(){
+        return <SvgDocument style={{position:'absolute',top:0,bottom:0,left:0,right:0}} artworkPath="launch"/>
+    }
     render(){
         return <Wave/>;
     }

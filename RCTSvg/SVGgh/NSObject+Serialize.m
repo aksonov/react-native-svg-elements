@@ -15,6 +15,9 @@
     NSError *error;
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"([a-z])([A-Z])" options:0 error:&error];
     NSString *modifiedString = [regex stringByReplacingMatchesInString:key options:0 range:NSMakeRange(0, [key length]) withTemplate:@"$1-$2"];
+    if ([modifiedString hasPrefix:@"_"]){
+        modifiedString = [modifiedString substringFromIndex:1];
+    }
     return [modifiedString lowercaseString];
 }
 

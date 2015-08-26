@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1242px" height="2208px" viewBox="0 0 1242 2208" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>upgrade</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path id="path-1" d="M0,0 L1242,0 L1242,1065 L614.867188,1138.01887 L0,1065 L0,0 Z"></path>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#C12C58" offset="0%"></stop>
+            <stop stop-color="#FF9016" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#D0118D" offset="0%"></stop>
+            <stop stop-color="#C30F0F" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="upgrade" sketch:type="MSArtboardGroup">
+            <rect id="bg" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0" width="1242" height="2208"></rect>
+            <g sketch:type="MSLayerGroup" transform="translate(0.000000, -51.000000)">
+                <g id="upgrade_bg">
+                    <mask id="mask-2" sketch:name="Rectangle 34" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Rectangle-34" fill="#9A0053" sketch:type="MSShapeGroup" xlink:href="#path-1"></use>
+                    <path d="M-6.671875,1067.30469 L1272.82026,18.6015625 L1268.98721,308.867722 C1265.46804,575.36514 1241.99995,1299.53125 1241.99995,1299.53125 L-158.251392,1108.35998 L-6.671875,1067.30469 Z" id="Path-20" fill-opacity="0.2" fill="url(#linearGradient-3)" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+                    <path d="M-37.2578136,8.19531209 L1118.85505,1243.35505 L-75.901807,1243.35505 L-75.901807,70.1355358" id="Path-21" fill-opacity="0.2" fill="url(#linearGradient-4)" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+                </g>
+                <g id="upgrade_bar" transform="translate(101.000000, 333.000000)">
+                    <g id="Rectangle-36-+-Path-18" transform="translate(0.000000, 32.000000)" sketch:type="MSShapeGroup">
+                        <path d="M40,70.6308594 L0,0 L129,0 L129,130 L0,130 L40,70.6308594 Z" id="Rectangle-36" fill="#DF0971"></path>
+                        <path d="M129.208252,130.20874 L120.090088,118.73584 L129.126709,117.417969" id="Path-18" fill="#D01160"></path>
+                    </g>
+                    <g id="Rectangle-36-+-Path-19" transform="translate(911.000000, 31.000000)" sketch:type="MSShapeGroup">
+                        <path d="M49,71.6308594 L9,1 L138,1 L138,131 L9,131 L49,71.6308594 Z" id="Rectangle-36" fill="#DF0972" transform="translate(73.500000, 66.000000) rotate(-180.000000) translate(-73.500000, -66.000000) "></path>
+                        <path d="M9.20825195,131.20874 L0.0190429688,118.861084 L9.12670898,118.417969" id="Path-18" fill="#D01160"></path>
+                    </g>
+                    <path d="M120,0.683611972 C120,0.683611972 391.930962,13.683612 524.461103,13.683612 C654.017175,13.683612 920,0.683611972 920,0.683611972 L920,150.683612 C920,150.683612 654.827523,137.683612 525.676625,137.683612 C392.741311,137.683612 120,150.683612 120,150.683612 L120,0.683611972 Z" id="Rectangle-35" fill="#F61890" sketch:type="MSShapeGroup"></path>
+                    <text id="Additional-Perks" sketch:type="MSTextLayer" font-family="Avenir Next" font-size="48" font-weight="normal" fill="#FFFFFF">
+                        <tspan x="342" y="91">Additional Perks</tspan>
+                    </text>
+                </g>
+                <g id="word" transform="translate(244.000000, 605.000000)">
+                    <text id="Unlock-all-of-your-m" sketch:type="MSTextLayer" font-family="Avenir Next" font-size="48" font-weight="normal" sketch:alignment="middle" line-spacing="125" fill="#FFFFFF">
+                        <tspan x="114.9" y="48">Unlock all of your messages!</tspan>
+                        <tspan x="114.828" y="173">Add to hotlist and stand out!</tspan>
+                        <tspan x="57.276" y="298">Enjoy all the features on websites!</tspan>
+                    </text>
+                    <circle id="Oval-32" stroke="#FFFFFF" stroke-width="5" sketch:type="MSShapeGroup" cx="72" cy="33" r="15"></circle>
+                    <circle id="Oval-33" stroke="#FFFFFF" stroke-width="5" sketch:type="MSShapeGroup" cx="72" cy="157" r="15"></circle>
+                    <circle id="Oval-34" stroke="#FFFFFF" stroke-width="5" sketch:type="MSShapeGroup" cx="15" cy="284" r="15"></circle>
+                    <text id="(Create-Groups,-star" sketch:type="MSTextLayer" font-family="Avenir Next" font-size="36" font-weight="normal" fill="#CCCCCC">
+                        <tspan x="64" y="359">(Create Groups, start blogs and send gifts)</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="upgrade_item" sketch:type="MSLayerGroup" transform="translate(31.000000, 1208.000000)">
+                <rect id="Rectangle-38" fill="#9A0053" sketch:type="MSShapeGroup" x="0" y="0" width="1181" height="278" rx="8"></rect>
+                <text id="6-Month" sketch:type="MSTextLayer" font-family="Avenir Next" font-size="67.8123678" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+                    <tspan x="461.500472" y="132">6 Month</tspan>
+                </text>
+                <text id="6.99/Month" sketch:type="MSTextLayer" font-family="Avenir Next" font-size="33.5416013" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="499.214883" y="191">6.99/Month</tspan>
+                </text>
+            </g>
+            <g id="upgrade_item-2" sketch:type="MSLayerGroup" transform="translate(29.673325, 1538.000000)">
+                <rect id="Rectangle-38" stroke="#9A0053" sketch:type="MSShapeGroup" x="1" y="0" width="580" height="278" rx="8"></rect>
+                <text id="3-Month" sketch:type="MSTextLayer" font-family="Avenir Next" font-size="68.3265306" font-weight="526" sketch:alignment="middle" fill="#9A0053">
+                    <tspan x="157.899918" y="139.170023">3 Month</tspan>
+                </text>
+                <text id="9.99/Month" sketch:type="MSTextLayer" font-family="Avenir Next" font-size="33.7959184" font-weight="normal" fill="#9A0053">
+                    <tspan x="200.3151" y="198.660465">9.99/Month</tspan>
+                </text>
+            </g>
+            <g id="upgrade_item-3" sketch:type="MSLayerGroup" transform="translate(630.673325, 1538.000000)">
+                <rect id="Rectangle-38" stroke="#9A0053" sketch:type="MSShapeGroup" x="1" y="0" width="580" height="278" rx="8"></rect>
+                <text id="1-Month" sketch:type="MSTextLayer" font-family="Avenir Next" font-size="68.3265306" font-weight="526" sketch:alignment="middle" fill="#9A0053">
+                    <tspan x="157.899918" y="139.170023">1 Month</tspan>
+                </text>
+                <text id="13.99/Month" sketch:type="MSTextLayer" font-family="Avenir Next" font-size="33.7959184" font-weight="normal" fill="#9A0053">
+                    <tspan x="183.436364" y="199">13.99/Month</tspan>
+                </text>
+            </g>
+            <rect id="Rectangle-41" fill="#9A0053" sketch:type="MSShapeGroup" x="27" y="1943" width="1187" height="150" rx="8"></rect>
+            <text id="BECOME-A-VIP-NOW!" sketch:type="MSTextLayer" font-family="Avenir Next" font-size="48" font-weight="normal" fill="#FFFFFF">
+                <tspan x="380" y="2033">BECOME A VIP NOW!</tspan>
+            </text>
+            <g id="nav" sketch:type="MSLayerGroup" transform="translate(0.000000, 68.000000)">
+                <g id="close" transform="translate(30.000000, 75.000000)" sketch:type="MSShapeGroup">
+                    <circle  stroke="#FFFFFF" id="Oval-501" stroke-width="2" cx="30" cy="30" r="30"></circle>
+                    <g id="cha"  transform="translate(30.000000, 30.000000) rotate(-5.000000) translate(-30.000000, -30.000000) translate(18.500000, 17.500000)">
+                        <path  stroke="#FFFFFF"  stroke-linecap="square" d="M2.96715394,1.02659821 L21.876234,24.3170832" id="Line" transform="translate(12.421694, 12.671841) rotate(-4.000000) translate(-12.421694, -12.671841) "></path>
+                        <path stroke="#FFFFFF"  stroke-linecap="square" d="M20.9811654,1.86585232 L0.168721353,23.4723831" id="Line-Copy"></path>
+                    </g>
+                </g>
+                <text id="Upgrade" sketch:type="MSTextLayer" font-family="Helvetica" font-size="48" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="529" y="118">Upgrade</tspan>
+                </text>
+            </g>
+            <g id="Status-Bar-Black" sketch:type="MSLayerGroup" fill="#FFFFFF">
+                <path d="M30.636,43.55 C35.6662095,43.55 39.744,39.4254233 39.744,34.3375 C39.744,29.2495767 35.6662095,25.125 30.636,25.125 C25.6057905,25.125 21.528,29.2495767 21.528,34.3375 C21.528,39.4254233 25.6057905,43.55 30.636,43.55 Z M53.82,43.55 C58.8502095,43.55 62.928,39.4254233 62.928,34.3375 C62.928,29.2495767 58.8502095,25.125 53.82,25.125 C48.7897905,25.125 44.712,29.2495767 44.712,34.3375 C44.712,39.4254233 48.7897905,43.55 53.82,43.55 Z M77.004,43.55 C82.0342095,43.55 86.112,39.4254233 86.112,34.3375 C86.112,29.2495767 82.0342095,25.125 77.004,25.125 C71.9737905,25.125 67.896,29.2495767 67.896,34.3375 C67.896,39.4254233 71.9737905,43.55 77.004,43.55 Z M100.188,43.55 C105.21821,43.55 109.296,39.4254233 109.296,34.3375 C109.296,29.2495767 105.21821,25.125 100.188,25.125 C95.1577905,25.125 91.08,29.2495767 91.08,34.3375 C91.08,39.4254233 95.1577905,43.55 100.188,43.55 Z M100.188,41.875 C104.303626,41.875 107.64,38.5003463 107.64,34.3375 C107.64,30.1746537 104.303626,26.8 100.188,26.8 C96.072374,26.8 92.736,30.1746537 92.736,34.3375 C92.736,38.5003463 96.072374,41.875 100.188,41.875 Z M123.372,43.55 C128.40221,43.55 132.48,39.4254233 132.48,34.3375 C132.48,29.2495767 128.40221,25.125 123.372,25.125 C118.34179,25.125 114.264,29.2495767 114.264,34.3375 C114.264,39.4254233 118.34179,43.55 123.372,43.55 Z M123.372,41.875 C127.487626,41.875 130.824,38.5003463 130.824,34.3375 C130.824,30.1746537 127.487626,26.8 123.372,26.8 C119.256374,26.8 115.92,30.1746537 115.92,34.3375 C115.92,38.5003463 119.256374,41.875 123.372,41.875 Z" id="Mobile-Signal" sketch:type="MSShapeGroup"></path>
+                <text id="Carrier" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="39.4285714" font-weight="normal" letter-spacing="0.200000003">
+                    <tspan x="145.728" y="49.725">Sketch</tspan>
+                </text>
+                <path d="M318.430322,41.6689895 C316.714551,39.6822426 314.151022,38.4208549 311.286809,38.4208549 C308.476392,38.4208549 305.95547,39.6353043 304.240867,41.5578143 L311.402649,48.575 L318.430322,41.6689895 Z M325.64742,34.5768322 C322.074709,30.7923479 316.963165,28.4229275 311.286809,28.4229275 C305.658758,28.4229275 300.585947,30.7521924 297.017741,34.4805235 L300.627917,38.0178099 C303.270583,35.1929922 307.067602,33.4218912 311.286809,33.4218912 C315.557038,33.4218912 319.394808,35.2360874 322.041066,38.1207532 L325.64742,34.5768322 L325.64742,34.5768322 Z M332.856,27.4930457 C327.434116,21.907113 319.775488,18.425 311.286809,18.425 C302.841034,18.425 295.21694,21.8720028 289.8,27.4085084 L293.408616,30.9442663 C297.901416,26.3119604 304.249899,23.4239637 311.286809,23.4239637 C318.369321,23.4239637 324.754454,26.3495124 329.252113,31.0345431 L332.856,27.4930457 Z" id="Wi-Fi" sketch:type="MSShapeGroup"></path>
+                <text id="9:41-AM" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="39.4285714" font-weight="normal" sketch:alignment="middle" letter-spacing="0.100000001">
+                    <tspan x="545.203429" y="49.725">9:41 AM</tspan>
+                </text>
+                <text id="100%" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="39.4285714" font-weight="normal" sketch:alignment="right">
+                    <tspan x="1027.50857" y="49.725">100%</tspan>
+                </text>
+                <path d="M1144.14541,18.425 C1143.31399,18.425 1142.64,19.0897104 1142.64,19.9173 L1142.64,48.7577 C1142.64,49.5818745 1143.30699,50.25 1144.14541,50.25 L1215.65459,50.25 C1216.48601,50.25 1217.16,49.5852896 1217.16,48.7577 L1217.16,19.9173 C1217.16,19.0931255 1216.49301,18.425 1215.65459,18.425 L1144.14541,18.425 Z M1218.816,28.475 L1218.816,40.2 L1222.77865,40.2 C1223.33389,40.2 1223.784,39.7546836 1223.784,39.2003331 L1223.784,29.4746669 C1223.784,28.9225661 1223.34312,28.475 1222.77865,28.475 L1218.816,28.475 Z M1145.30262,20.1 C1144.74668,20.1 1144.296,20.5472743 1144.296,21.096744 L1144.296,47.578256 C1144.296,48.1287425 1144.75072,48.575 1145.30262,48.575 L1214.49738,48.575 C1215.05332,48.575 1215.504,48.1277257 1215.504,47.578256 L1215.504,21.096744 C1215.504,20.5462575 1215.04928,20.1 1214.49738,20.1 L1145.30262,20.1 Z M1146.45948,21.775 C1146.1792,21.775 1145.952,21.9922071 1145.952,22.2768814 L1145.952,46.3981186 C1145.952,46.6753 1146.17158,46.9 1146.45948,46.9 L1213.34052,46.9 C1213.6208,46.9 1213.848,46.6827929 1213.848,46.3981186 L1213.848,22.2768814 C1213.848,21.9997 1213.62842,21.775 1213.34052,21.775 L1146.45948,21.775 Z" id="Battery" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>
