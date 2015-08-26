@@ -7,6 +7,7 @@
 //
 
 #import "RCTSvgRect.h"
+#import "UIView+React.h"
 
 @implementation RCTSvgRect
 
@@ -17,19 +18,47 @@
     }
     return @{kAttributesElementName: map, kElementName: @"rect"};
 }
++(CGSize) currentSize
+{
+    return [RCTSvgRect sizeInOrientation:[UIApplication sharedApplication].statusBarOrientation];
+}
 
++(CGSize) sizeInOrientation:(UIInterfaceOrientation)orientation
+{
+    CGSize size = [UIScreen mainScreen].bounds.size;
+    UIApplication *application = [UIApplication sharedApplication];
+    if (UIInterfaceOrientationIsLandscape(orientation))
+    {
+        size = CGSizeMake(size.height, size.width);
+    }
+    if (application.statusBarHidden == NO)
+    {
+        size.height -= MIN(application.statusBarFrame.size.width, application.statusBarFrame.size.height);
+    }
+    return size;
+}
 -(SVGAttributedObject *)obj {
+    self.contentMode = UIViewContentModeTop;
+    self.userInteractionEnabled = NO;
+    
     GHRenderableObject *o = super.obj;
     if (!o){
         GHRectangle *rect = [[GHRectangle alloc] initWithDictionary:[self objParams]];
-        //path.transform = CGAffineTransformMakeScale(self.scale, self.scale);
-        
         super.obj = rect;
         [self setNeedsDisplay];
-        //        self.bounds =  CGRectMake(0, 0, bounds.size.width*self.scale, bounds.size.height*self.scale);
-        //        self.bounds =  CGRectMake(bounds.origin.x * self.scale,  bounds.origin.y * self.scale, bounds.size.width*self.scale, bounds.size.height*self.scale);
     }
     return super.obj;
 }
 
+- (void)reactSetFrame:(CGRect)frame
+{
+    // Text looks super weird if its frame is animated.
+    // This disables the frame animation, without affecting opacity, etc.
+    CGSize size = [RCTSvgRect currentSize];
+    CGRect rect = frame;
+    CGRect newRect = CGRectMake(rect.origin.x, rect.origin.y, size.width, size.height);
+    [UIView performWithoutAnimation:^{
+        [super reactSetFrame:newRect];
+    }];
+}
 @end

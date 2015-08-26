@@ -7,7 +7,8 @@ var {
     PropTypes,
     Dimensions,
     Image,
-    Text
+    Text,
+    TouchableOpacity
     } = React;
 
 var windowSize = Dimensions.get('window');
@@ -72,7 +73,9 @@ class Rect extends React.Component {
         var { width, height, ...props } = this.props;
         props._height = height;
         props._width = width;
-        return <SVGRect style={{position:'absolute',top:0,bottom:0,right:0,left:0,backgroundColor:'transparent'}} ref="child" {...props}/>;
+        var scale = this.props.scale;
+        return <SVGRect style={{position:'absolute',top:0,left:0,bottom:0,right:0, backgroundColor:'transparent'}} ref="child" {...props}/>;
+//        return <SVGRect style={{position:'absolute',top:0,left:0,width:width*scale,height:height*scale, backgroundColor:'transparent'}} ref="child" {...props}/>;
     }
 }
 
@@ -152,6 +155,19 @@ LinearGradient.propTypes = {
 
 var SVGLinearGradient = requireNativeComponent('RCTSvgLinearGradient', LinearGradient);
 
+function generateChildren(props, scale){
+    var i=0;
+    var res=[];
+    React.Children.forEach(props.children, function(el) {
+        var id = el.props.id;
+        var passProps = props.passProps || {};
+        var customProps = passProps[id] || {};
+        var map = {key:i++, scale:scale, passProps: props.passProps, ...customProps};
+        res.push(React.addons.cloneWithProps(el, map));
+    });
+    return res;
+}
+
 class G extends React.Component {
     setNativeProps(nativeProps) {
         this.refs.child.setNativeProps(nativeProps);
@@ -161,18 +177,29 @@ class G extends React.Component {
         var translateX = this.props.translateX || 0;
         var translateY = this.props.translateY || 0;
         var scale = this.props.scale;
-        console.log(`G render(), scale ${scale}, ${translateX}, ${translateY}`);
-        var i=0;
-        var children = React.Children.map(this.props.children, el=>React.addons.cloneWithProps(el, {key:i++, scale:scale}));
-//        var children = React.Children.map(this.props.children, el=>React.addons.cloneWithProps(el, {key:i++, scale:scale,style:{position: 'absolute', top: scale*translateY, backgroundColor: 'transparent', bottom: 0, left: scale*translateX, right: 0}}));
+        var children = generateChildren(this.props, scale);
 
-        return (
-            <View ref="child" style={{backgroundColor:'transparent',"position":"absolute","top":scale*translateY,"bottom":0,"left":scale*translateX,"right":0}} {...this.props}>
-                {children}
-            </View>
-        );
-//        return <View style={{backgroundColor:'transparent',flex:1, transform:[{translateX:scale*translateX},{translateY:translateY*scale-5}]}} ref="child" {...this.props} />;
-        //return <SVGG ref="child" {...this.props} />;
+        var styles = {
+            backgroundColor:'transparent',
+            position:"absolute",
+            top:scale*translateY,
+            bottom:0,
+            left:scale*translateX,
+            right:0
+        };
+        if (this.props.onPress){
+            return (
+                <TouchableOpacity ref="child" style={styles} {...this.props} >
+                    {children}
+                </TouchableOpacity>
+            );
+        } else {
+            return (
+                <View ref="child" style={styles} {...this.props}>
+                    {children}
+                </View>
+            );
+        }
     }
 }
 
@@ -229,8 +256,7 @@ class Svg extends React.Component {
             return (<View style={this.props.style} onLayout={this.onLayout.bind(this)}/>);
         }
         console.log("SCALE:"+this.state.scale);
-        var i=0;
-        var children = React.Children.map(this.props.children, el=>React.addons.cloneWithProps(el, {key:i++, scale:this.state.scale}));
+        var children = generateChildren(this.props, this.state.scale);
         return (
             <View ref="child" style={{"position":"absolute","top":0,"bottom":0,"left":0,"right":0}} {...this.props}>
                 {children}
