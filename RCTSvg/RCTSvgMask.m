@@ -29,6 +29,7 @@
 
 
 -(id) obj {
+    self.userInteractionEnabled = NO;
     if (!super.obj){
         GHMask *p = [[GHMask alloc] initWithDictionary:[self objParams]];
         [super setObj:p];

@@ -38,7 +38,6 @@
     return size;
 }
 -(SVGAttributedObject *)obj {
-    self.contentMode = UIViewContentModeTop;
     self.userInteractionEnabled = NO;
     
     GHRenderableObject *o = super.obj;
@@ -48,17 +47,5 @@
         [self setNeedsDisplay];
     }
     return super.obj;
-}
-
-- (void)reactSetFrame:(CGRect)frame
-{
-    // Text looks super weird if its frame is animated.
-    // This disables the frame animation, without affecting opacity, etc.
-    CGSize size = [RCTSvgRect currentSize];
-    CGRect rect = frame;
-    CGRect newRect = CGRectMake(rect.origin.x, rect.origin.y, size.width, size.height);
-    [UIView performWithoutAnimation:^{
-        [super reactSetFrame:newRect];
-    }];
 }
 @end

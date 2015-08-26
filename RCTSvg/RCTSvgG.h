@@ -11,7 +11,8 @@
 @interface RCTSvgG : RCTSvgElement {
     NSMutableArray *children;
 }
-
+@property (nonatomic, strong) NSString* __nullable  id;
+@property (nonatomic, strong) NSString* __nullable  _transform;
 @property (nonatomic, strong) NSString* __nullable  fill;
 @property (nonatomic, strong) NSString* __nullable  fillOpacity;
 @property (nonatomic, strong) NSString*  __nullable scale;

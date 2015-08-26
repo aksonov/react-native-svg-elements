@@ -24,6 +24,7 @@
 
 
 -(id) obj {
+    self.userInteractionEnabled = NO;
     if (!super.obj){
         GHRenderableObjectPlaceholder *p = [[GHRenderableObjectPlaceholder alloc] initWithDictionary:[self objParams]];
         [super setObj:p];

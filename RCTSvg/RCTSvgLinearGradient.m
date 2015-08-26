@@ -12,6 +12,7 @@
 @implementation RCTSvgLinearGradient
 
 -(id) obj {
+    self.userInteractionEnabled = NO;
     if (!super.obj){
         NSMutableArray *children = [NSMutableArray arrayWithCapacity:[self.stop count]];
         for (NSString *value in self.stop){

@@ -45,23 +45,29 @@ class Path extends React.Component {
 
     render() {
         //console.log("SVGPATH d="+this.props.d);
-        return <SVGPath ref="child" {...this.props} style={[{position:'absolute',top:0,backgroundColor:'transparent',bottom:0,left:0,right:0}, this.props.style]}  />;
+        var { transform, ...props } = this.props;
+        if (transform)
+            props._transform = transform;
+        return <SVGPath ref="child" {...props} style={[{position:'absolute',top:0,backgroundColor:'transparent',bottom:0,left:0,right:0}, this.props.style]}  />;
     }
 }
 
 Path.propTypes = {
     fill: PropTypes.string,
+    fillRule: PropTypes.string,
     stroke: PropTypes.string,
     strokeWidth: PropTypes.string,
+    strokeLinecap: PropTypes.string,
     strokeMiterLimit: PropTypes.string,
     d: PropTypes.string,
     id: PropTypes.string,
     fillOpacity: PropTypes.string,
     mask: PropTypes.string,
+    _transform: PropTypes.string,
     scale: PropTypes.number,
 };
 
-var SVGRect = requireNativeComponent('RCTSvgPath', Path);
+var SVGPath = requireNativeComponent('RCTSvgPath', Path);
 
 class Rect extends React.Component {
     setNativeProps(nativeProps) {
@@ -97,6 +103,32 @@ Rect.propTypes = {
 };
 
 var SVGRect = requireNativeComponent('RCTSvgRect', Rect);
+
+class Circle extends React.Component {
+    setNativeProps(nativeProps) {
+        this.refs.child.setNativeProps(nativeProps);
+    }
+
+    render() {
+        return <SVGCircle style={{position:'absolute',top:0,left:0,bottom:0,right:0, backgroundColor:'transparent'}} ref="child" {...this.props}/>;
+    }
+}
+
+Circle.propTypes = {
+    fill: PropTypes.string,
+    stroke: PropTypes.string,
+    strokeWidth: PropTypes.string,
+    strokeMiterLimit: PropTypes.string,
+    r: PropTypes.string,
+    cx: PropTypes.string,
+    cy: PropTypes.string,
+    id: PropTypes.string,
+    fillOpacity: PropTypes.string,
+    mask: PropTypes.string,
+    scale: PropTypes.number,
+};
+
+var SVGCircle = requireNativeComponent('RCTSvgCircle', Circle);
 
 class Defs extends React.Component {
     setNativeProps(nativeProps) {
@@ -140,7 +172,18 @@ class LinearGradient extends React.Component {
     }
 
     render() {
-        return <SVGLinearGradient style={{position:'absolute',top:0,backgroundColor:'transparent',bottom:0,left:0,right:0}} ref="child" {...this.props} />;
+        var stop = [];
+        React.Children.forEach(this.props.children, function (el){
+           stop.push(el.props.stopColor+","+el.props.offset);
+        });
+
+        return <SVGLinearGradient style={{position:'absolute',top:0,backgroundColor:'transparent',bottom:0,left:0,right:0}} ref="child" stop={stop} {...this.props} />;
+    }
+}
+
+class Stop extends React.Component {
+    render(){
+        return null;
     }
 }
 
@@ -162,7 +205,10 @@ function generateChildren(props, scale){
         var id = el.props.id;
         var passProps = props.passProps || {};
         var customProps = passProps[id] || {};
-        var map = {key:i++, scale:scale, passProps: props.passProps, ...customProps};
+        var elProps = el.props;
+        // apply stroke, fill to children
+        var {stroke, strokeWidth, fill, fillRule} = props;
+        var map = {stroke, strokeWidth, fill, fillRule, key:i++, scale:scale, passProps: props.passProps, ...elProps, ...customProps};
         res.push(React.addons.cloneWithProps(el, map));
     });
     return res;
@@ -179,6 +225,10 @@ class G extends React.Component {
         var scale = this.props.scale;
         var children = generateChildren(this.props, scale);
 
+        var { transform, ...props } = this.props;
+        if (transform)
+            props._transform = transform;
+
         var styles = {
             backgroundColor:'transparent',
             position:"absolute",
@@ -188,22 +238,24 @@ class G extends React.Component {
             right:0
         };
         if (this.props.onPress){
+            console.log("TOUCHABLE "+this.props.id);
             return (
-                <TouchableOpacity ref="child" style={styles} {...this.props} >
+                <TouchableOpacity ref="child" style={styles} {...props} >
                     {children}
                 </TouchableOpacity>
             );
         } else {
             return (
-                <View ref="child" style={styles} {...this.props}>
+                <SVGG ref="child" style={styles} {...props}>
                     {children}
-                </View>
+                </SVGG>
             );
         }
     }
 }
 
 G.propTypes = {
+    _transform: PropTypes.string,
     fill: PropTypes.string,
     stroke: PropTypes.string,
     strokeWidth: PropTypes.string,
@@ -247,6 +299,7 @@ class Svg extends React.Component {
         var svgWidth = this.props.width;
         var svgHeight = this.props.height;
         this.setState({scale : width/svgWidth});
+
         //console.log(`onLayout ${x}, ${y}, ${svgWidth}, ${svgHeight}, ${width}, ${height}`);
     }
 
@@ -281,11 +334,11 @@ class SvgImage extends React.Component {
 
 class SvgText extends React.Component {
     render(){
-        var scale = this.props.scale || 1;
-        return <Text {...this.props} style={[this.props.style, {position:"absolute",top:this.props.y*scale-this.props.style.fontSize*scale, left:this.props.x*scale, fontSize: this.props.style.fontSize*scale}]} />
+        var scale = this.props.scale;
+        return <Text {...this.props} style={[{color:this.props.fill}, this.props.style, {position:"absolute",top:this.props.y*scale-this.props.style.fontSize*scale, left:this.props.x*scale, fontSize: this.props.style.fontSize*scale}]} />
     }
 }
 
 
 
-module.exports = {Use, Path, Defs, Mask, LinearGradient, G, SvgDocument, Svg, Rect, SvgImage, SvgText};
+module.exports = {Use, Stop, Path, Defs, Mask, LinearGradient, G, SvgDocument, Svg, Rect, SvgImage, SvgText, Circle};

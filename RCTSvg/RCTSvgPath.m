@@ -13,7 +13,10 @@
 -(NSDictionary *)objParams {
     NSMutableDictionary *map = [NSMutableDictionary dictionaryWithDictionary:[self asAttributes]];
     if (self.scale){
-        map[@"transform"] = [NSString stringWithFormat:@"scale(%@)", self.scale];
+        if (map[@"transform"]){
+            map[@"transform"] = [NSString stringWithFormat:@"scale(%@) %@", self.scale,map[@"transform"]];
+        } else
+            map[@"transform"] = [NSString stringWithFormat:@"scale(%@)", self.scale];
     }
     return @{kAttributesElementName: map, kElementName: @"path"};
 }
@@ -21,7 +24,6 @@
 -(void)setD:(NSString * __nullable)d {
     _d = d;
     super.obj = nil;
-    [self prepare];
 }
 
 -(SVGAttributedObject *)obj {

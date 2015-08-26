@@ -16,6 +16,15 @@
     return self;
 }
 
+-(NSDictionary *)objParams {
+    NSDictionary *dict = [self asAttributes];
+    
+    return @{kAttributesElementName : dict, kContentsElementName: children};
+}
+
+
+
+
 - (void)insertReactSubview:(UIView *)subview atIndex:(NSInteger)atIndex
 {
     [super insertSubview:subview atIndex:atIndex];
