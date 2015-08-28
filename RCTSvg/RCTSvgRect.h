@@ -26,3 +26,21 @@
 @property (nonatomic, strong) NSString* __nullable  strokeWidth;
 
 @end
+
+@interface RCTSvgRectShadow : RCTShadowView
+
+@property (nonatomic, strong) NSString* __nullable id;
+@property (nonatomic, strong) NSString* __nullable  fill;
+@property (nonatomic, strong) NSString* __nullable  fillOpacity;
+@property (nonatomic, strong) NSString*  __nullable  mask;
+@property (nonatomic, strong) NSString*  __nullable  scale;
+@property (nonatomic, strong) NSString* __nullable  rx;
+@property (nonatomic, strong) NSString* __nullable  ry;
+@property (nonatomic, strong) NSString* __nullable  x;
+@property (nonatomic, strong) NSString* __nullable  y;
+@property (nonatomic, strong) NSString* __nullable  _width;
+@property (nonatomic, strong) NSString* __nullable  _height;
+@property (nonatomic, strong) NSString* __nullable  stroke;
+@property (nonatomic, strong) NSString* __nullable  strokeWidth;
+
+@end

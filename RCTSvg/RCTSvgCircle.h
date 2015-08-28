@@ -7,8 +7,24 @@
 //
 
 #import "RCTSvgElement.h"
+#import "RCTShadowView.h"
 
 @interface RCTSvgCircle : RCTSvgElement
+
+@property (nonatomic, strong) NSString* __nullable id;
+@property (nonatomic, strong) NSString* __nullable  fill;
+@property (nonatomic, strong) NSString* __nullable  fillOpacity;
+@property (nonatomic, strong) NSString*  __nullable  mask;
+@property (nonatomic, strong) NSString*  __nullable  scale;
+@property (nonatomic, strong) NSString* __nullable  cx;
+@property (nonatomic, strong) NSString* __nullable  cy;
+@property (nonatomic, strong) NSString* __nullable  r;
+@property (nonatomic, strong) NSString* __nullable  stroke;
+@property (nonatomic, strong) NSString* __nullable  strokeWidth;
+
+@end
+
+@interface RCTSvgCircleShadow : RCTShadowView
 
 @property (nonatomic, strong) NSString* __nullable id;
 @property (nonatomic, strong) NSString* __nullable  fill;

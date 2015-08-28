@@ -25,6 +25,7 @@
 }
 
 -(void)addObject:(id __nonnull)object forKey:(NSString * __nonnull)ident {
+    if (ident)
     objects[ident] = object;
 }
 

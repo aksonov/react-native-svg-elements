@@ -24,7 +24,6 @@
 
 
 -(id) obj {
-    self.userInteractionEnabled = NO;
     if (!super.obj){
         GHRenderableObjectPlaceholder *p = [[GHRenderableObjectPlaceholder alloc] initWithDictionary:[self objParams]];
         [super setObj:p];
@@ -34,3 +33,34 @@
 
 
 @end
+
+
+@implementation RCTSvgUseShadow
+static css_dim_t RCTUseMeasure(void *context, float width)
+{
+    RCTSvgUseShadow *shadowView = (__bridge RCTSvgUseShadow *)context;
+    
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:[RCTSvgElement objParams:@"use" object:shadowView]];
+    
+    dict[@"xlink:href"] = shadowView.xlinkHref;
+    GHRenderableObjectPlaceholder *rect = [[GHRenderableObjectPlaceholder alloc] initWithAttributes:dict];
+    id<GHRenderable> myConcrete = [rect concreteObjectForSVGContext:[RCTSvgDynamicRenderer sharedInstace] excludingPrevious:nil];
+    
+    CGRect bounds = [myConcrete getBoundingBoxWithSVGContext:[RCTSvgDynamicRenderer sharedInstace]];
+    CGSize computedSize = CGSizeMake(bounds.size.width+bounds.origin.x,bounds.size.height+bounds.origin.y);//[layoutManager usedRectForTextContainer:textContainer].size;
+    
+    css_dim_t result;
+    result.dimensions[CSS_WIDTH] = RCTCeilPixelValue(computedSize.width);
+    result.dimensions[CSS_HEIGHT] = RCTCeilPixelValue(computedSize.height);
+    return result;
+}
+
+- (void)fillCSSNode:(css_node_t *)node
+{
+    [super fillCSSNode:node];
+    node->measure = RCTUseMeasure;
+    node->children_count = 0;
+}
+
+@end
+

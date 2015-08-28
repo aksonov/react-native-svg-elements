@@ -26,4 +26,18 @@ RCT_EXPORT_VIEW_PROPERTY(mask, NSString)
 RCT_EXPORT_VIEW_PROPERTY(scale, NSString)
 RCT_EXPORT_VIEW_PROPERTY(id, NSString)
 
+- (RCTShadowView *)shadowView
+{
+    RCTSvgUseShadow *svg = [[RCTSvgUseShadow alloc] init];
+    return svg;
+}
+RCT_EXPORT_SHADOW_PROPERTY(xlinkHref, NSString)
+RCT_EXPORT_SHADOW_PROPERTY(stroke, NSString)
+RCT_EXPORT_SHADOW_PROPERTY(strokeWidth, NSString)
+RCT_EXPORT_SHADOW_PROPERTY(fill, NSString)
+RCT_EXPORT_SHADOW_PROPERTY(fillOpacity, NSString)
+RCT_EXPORT_SHADOW_PROPERTY(mask, NSString)
+RCT_EXPORT_SHADOW_PROPERTY(scale, NSString)
+RCT_EXPORT_SHADOW_PROPERTY(id, NSString)
+
 @end

@@ -10,6 +10,9 @@
 #import "GHRenderable.h"
 #import "SVGAttributedObject.h"
 #import "NSObject+Serialize.h"
+#import "RCTSvgDynamicRenderer.h"
+#import "RCTUtils.h"
+#import "RCTShadowView.h"
 
 @interface RCTSvgElement : UIView
 
@@ -17,6 +20,8 @@
 @property (nonatomic, strong) id __nullable obj;
 -(void)prepare;
 -(NSDictionary *__nullable)objParams;
+
++(NSDictionary *__nullable)objParams:(NSString *__nonnull)name object:(id __nonnull)obj;
 
 
 @end

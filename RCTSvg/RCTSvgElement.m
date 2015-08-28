@@ -13,6 +13,8 @@
 
 -(id)init {
     self = [super init];
+    self.contentMode = UIViewContentModeRedraw;
+    self.opaque = NO;
     return self;
 }
 
@@ -22,8 +24,7 @@
     }
 }
 
--(NSDictionary *)objParams {
-    // should be overriden in descedants
+-(NSDictionary *__nullable)objParams {
     return nil;
 }
 
@@ -43,4 +44,15 @@
     }
 }
 
++(NSDictionary *__nullable)objParams:(NSString *)name object:(id)obj{
+    NSMutableDictionary *map = [NSMutableDictionary dictionaryWithDictionary:[obj asAttributes]];
+    if (map[@"scale"]){
+        if (map[@"transform"]){
+            map[@"transform"] = [NSString stringWithFormat:@"scale(%@) %@",map[@"scale"],map[@"transform"]];
+        } else
+            map[@"transform"] = [NSString stringWithFormat:@"scale(%@)", map[@"scale"]];
+    }
+    return @{kAttributesElementName: map, kElementName: name};
+    
+}
 @end

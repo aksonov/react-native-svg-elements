@@ -35,6 +35,8 @@
 		87376A6E1B7CDE6A00F7C3C2 /* RCTSvgDynamicRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 87376A6D1B7CDE6A00F7C3C2 /* RCTSvgDynamicRenderer.m */; };
 		877DC60B1B8E0CD700C6115B /* RCTSvgCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 877DC60A1B8E0CD700C6115B /* RCTSvgCircle.m */; };
 		877DC60E1B8E0D6800C6115B /* RCTSvgCircleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 877DC60D1B8E0D6700C6115B /* RCTSvgCircleManager.m */; };
+		877DC6181B8F748E00C6115B /* RCTSvgG.m in Sources */ = {isa = PBXBuildFile; fileRef = 877DC6151B8F748E00C6115B /* RCTSvgG.m */; };
+		877DC6191B8F748E00C6115B /* RCTSvgGManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 877DC6171B8F748E00C6115B /* RCTSvgGManager.m */; };
 		87D7C4241B7DE75200D8B42F /* NSObject+Serialize.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D7C4231B7DE75200D8B42F /* NSObject+Serialize.m */; };
 		87D7C43D1B7DE8F600D8B42F /* RCTSvgPathManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D7C4261B7DE8F600D8B42F /* RCTSvgPathManager.m */; };
 		87D7C43E1B7DE8F600D8B42F /* RCTSvgDefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D7C4281B7DE8F600D8B42F /* RCTSvgDefs.m */; };
@@ -45,11 +47,7 @@
 		87D7C4431B7DE8F600D8B42F /* RCTSvgUseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D7C4321B7DE8F600D8B42F /* RCTSvgUseManager.m */; };
 		87D7C4441B7DE8F600D8B42F /* RCTSvgMask.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D7C4341B7DE8F600D8B42F /* RCTSvgMask.m */; };
 		87D7C4451B7DE8F600D8B42F /* RCTSvgMaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D7C4361B7DE8F600D8B42F /* RCTSvgMaskManager.m */; };
-		87D7C4461B7DE8F600D8B42F /* RCTSvgG.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D7C4381B7DE8F600D8B42F /* RCTSvgG.m */; };
-		87D7C4471B7DE8F600D8B42F /* RCTSvgGManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D7C43A1B7DE8F600D8B42F /* RCTSvgGManager.m */; };
 		87D7C4481B7DE8F600D8B42F /* RCTSvgDocumentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D7C43C1B7DE8F600D8B42F /* RCTSvgDocumentManager.m */; };
-		87D7C4611B7E003300D8B42F /* RCTSvg.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D7C4601B7E003300D8B42F /* RCTSvg.m */; };
-		87D7C4641B7E007800D8B42F /* RCTSvgManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D7C4631B7E007800D8B42F /* RCTSvgManager.m */; };
 		87E056E11B8CD4B900E274B2 /* RCTSvgRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E056E01B8CD4B900E274B2 /* RCTSvgRect.m */; };
 		87E056E41B8CD58B00E274B2 /* RCTSvgRectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E056E31B8CD58B00E274B2 /* RCTSvgRectManager.m */; };
 /* End PBXBuildFile section */
@@ -127,6 +125,10 @@
 		877DC60A1B8E0CD700C6115B /* RCTSvgCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTSvgCircle.m; sourceTree = "<group>"; };
 		877DC60C1B8E0D6700C6115B /* RCTSvgCircleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTSvgCircleManager.h; sourceTree = "<group>"; };
 		877DC60D1B8E0D6700C6115B /* RCTSvgCircleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTSvgCircleManager.m; sourceTree = "<group>"; };
+		877DC6141B8F748E00C6115B /* RCTSvgG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTSvgG.h; sourceTree = "<group>"; };
+		877DC6151B8F748E00C6115B /* RCTSvgG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTSvgG.m; sourceTree = "<group>"; };
+		877DC6161B8F748E00C6115B /* RCTSvgGManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTSvgGManager.h; sourceTree = "<group>"; };
+		877DC6171B8F748E00C6115B /* RCTSvgGManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTSvgGManager.m; sourceTree = "<group>"; };
 		87D7C4221B7DE75200D8B42F /* NSObject+Serialize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+Serialize.h"; path = "SVGgh/NSObject+Serialize.h"; sourceTree = "<group>"; };
 		87D7C4231B7DE75200D8B42F /* NSObject+Serialize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Serialize.m"; path = "SVGgh/NSObject+Serialize.m"; sourceTree = "<group>"; };
 		87D7C4251B7DE8F600D8B42F /* RCTSvgPathManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTSvgPathManager.h; sourceTree = "<group>"; };
@@ -147,16 +149,8 @@
 		87D7C4341B7DE8F600D8B42F /* RCTSvgMask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTSvgMask.m; sourceTree = "<group>"; };
 		87D7C4351B7DE8F600D8B42F /* RCTSvgMaskManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTSvgMaskManager.h; sourceTree = "<group>"; };
 		87D7C4361B7DE8F600D8B42F /* RCTSvgMaskManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTSvgMaskManager.m; sourceTree = "<group>"; };
-		87D7C4371B7DE8F600D8B42F /* RCTSvgG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTSvgG.h; sourceTree = "<group>"; };
-		87D7C4381B7DE8F600D8B42F /* RCTSvgG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTSvgG.m; sourceTree = "<group>"; };
-		87D7C4391B7DE8F600D8B42F /* RCTSvgGManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTSvgGManager.h; sourceTree = "<group>"; };
-		87D7C43A1B7DE8F600D8B42F /* RCTSvgGManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTSvgGManager.m; sourceTree = "<group>"; };
 		87D7C43B1B7DE8F600D8B42F /* RCTSvgDocumentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTSvgDocumentManager.h; sourceTree = "<group>"; };
 		87D7C43C1B7DE8F600D8B42F /* RCTSvgDocumentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTSvgDocumentManager.m; sourceTree = "<group>"; };
-		87D7C45F1B7E003300D8B42F /* RCTSvg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCTSvg.h; path = SVGgh/SVG/RCTSvg.h; sourceTree = "<group>"; };
-		87D7C4601B7E003300D8B42F /* RCTSvg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCTSvg.m; path = SVGgh/SVG/RCTSvg.m; sourceTree = "<group>"; };
-		87D7C4621B7E007800D8B42F /* RCTSvgManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTSvgManager.h; sourceTree = "<group>"; };
-		87D7C4631B7E007800D8B42F /* RCTSvgManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTSvgManager.m; sourceTree = "<group>"; };
 		87E056DF1B8CD4B900E274B2 /* RCTSvgRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTSvgRect.h; sourceTree = "<group>"; };
 		87E056E01B8CD4B900E274B2 /* RCTSvgRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTSvgRect.m; sourceTree = "<group>"; };
 		87E056E21B8CD58B00E274B2 /* RCTSvgRectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTSvgRectManager.h; sourceTree = "<group>"; };
@@ -197,12 +191,12 @@
 				87376A141B7CDAB200F7C3C2 /* SVGgh */,
 				87D7C4221B7DE75200D8B42F /* NSObject+Serialize.h */,
 				87D7C4231B7DE75200D8B42F /* NSObject+Serialize.m */,
+				873769B51B7CD98900F7C3C2 /* RCTSvgElement.h */,
+				873769B61B7CD98900F7C3C2 /* RCTSvgElement.m */,
 				873769B21B7CD96E00F7C3C2 /* RCTSvgPath.h */,
 				873769B31B7CD96E00F7C3C2 /* RCTSvgPath.m */,
 				87D7C4251B7DE8F600D8B42F /* RCTSvgPathManager.h */,
 				87D7C4261B7DE8F600D8B42F /* RCTSvgPathManager.m */,
-				873769B51B7CD98900F7C3C2 /* RCTSvgElement.h */,
-				873769B61B7CD98900F7C3C2 /* RCTSvgElement.m */,
 				87376A6C1B7CDE6A00F7C3C2 /* RCTSvgDynamicRenderer.h */,
 				87376A6D1B7CDE6A00F7C3C2 /* RCTSvgDynamicRenderer.m */,
 				87D7C4271B7DE8F600D8B42F /* RCTSvgDefs.h */,
@@ -221,16 +215,8 @@
 				87D7C4341B7DE8F600D8B42F /* RCTSvgMask.m */,
 				87D7C4351B7DE8F600D8B42F /* RCTSvgMaskManager.h */,
 				87D7C4361B7DE8F600D8B42F /* RCTSvgMaskManager.m */,
-				87D7C4371B7DE8F600D8B42F /* RCTSvgG.h */,
-				87D7C4381B7DE8F600D8B42F /* RCTSvgG.m */,
-				87D7C4391B7DE8F600D8B42F /* RCTSvgGManager.h */,
-				87D7C43A1B7DE8F600D8B42F /* RCTSvgGManager.m */,
 				87D7C43B1B7DE8F600D8B42F /* RCTSvgDocumentManager.h */,
 				87D7C43C1B7DE8F600D8B42F /* RCTSvgDocumentManager.m */,
-				87D7C45F1B7E003300D8B42F /* RCTSvg.h */,
-				87D7C4601B7E003300D8B42F /* RCTSvg.m */,
-				87D7C4621B7E007800D8B42F /* RCTSvgManager.h */,
-				87D7C4631B7E007800D8B42F /* RCTSvgManager.m */,
 				87E056DF1B8CD4B900E274B2 /* RCTSvgRect.h */,
 				87E056E01B8CD4B900E274B2 /* RCTSvgRect.m */,
 				87E056E21B8CD58B00E274B2 /* RCTSvgRectManager.h */,
@@ -239,6 +225,10 @@
 				877DC60A1B8E0CD700C6115B /* RCTSvgCircle.m */,
 				877DC60C1B8E0D6700C6115B /* RCTSvgCircleManager.h */,
 				877DC60D1B8E0D6700C6115B /* RCTSvgCircleManager.m */,
+				877DC6141B8F748E00C6115B /* RCTSvgG.h */,
+				877DC6151B8F748E00C6115B /* RCTSvgG.m */,
+				877DC6161B8F748E00C6115B /* RCTSvgGManager.h */,
+				877DC6171B8F748E00C6115B /* RCTSvgGManager.m */,
 			);
 			path = RCTSvg;
 			sourceTree = "<group>";
@@ -408,6 +398,7 @@
 				87D7C4431B7DE8F600D8B42F /* RCTSvgUseManager.m in Sources */,
 				87376A631B7CDAB200F7C3C2 /* NSData+Base64Additions.m in Sources */,
 				87376A621B7CDAB200F7C3C2 /* Base64Transcoder.m in Sources */,
+				877DC6181B8F748E00C6115B /* RCTSvgG.m in Sources */,
 				87D7C43F1B7DE8F600D8B42F /* RCTSvgDefsManager.m in Sources */,
 				87D7C4451B7DE8F600D8B42F /* RCTSvgMaskManager.m in Sources */,
 				87376A5C1B7CDAB200F7C3C2 /* GHGlyph.m in Sources */,
@@ -420,10 +411,8 @@
 				873769B71B7CD98900F7C3C2 /* RCTSvgElement.m in Sources */,
 				877DC60E1B8E0D6800C6115B /* RCTSvgCircleManager.m in Sources */,
 				87D7C43E1B7DE8F600D8B42F /* RCTSvgDefs.m in Sources */,
-				87D7C4471B7DE8F600D8B42F /* RCTSvgGManager.m in Sources */,
 				87376A581B7CDAB200F7C3C2 /* SVGParser.m in Sources */,
 				87376A641B7CDAB200F7C3C2 /* GHImageCache.m in Sources */,
-				87D7C4641B7E007800D8B42F /* RCTSvgManager.m in Sources */,
 				87E056E11B8CD4B900E274B2 /* RCTSvgRect.m in Sources */,
 				87376A541B7CDAB200F7C3C2 /* GHText.m in Sources */,
 				87D7C4441B7DE8F600D8B42F /* RCTSvgMask.m in Sources */,
@@ -434,11 +423,10 @@
 				87376A6E1B7CDE6A00F7C3C2 /* RCTSvgDynamicRenderer.m in Sources */,
 				87376A671B7CDAB200F7C3C2 /* GHControlFactory.m in Sources */,
 				87376A531B7CDAB200F7C3C2 /* GHPathUtilities.m in Sources */,
-				87D7C4611B7E003300D8B42F /* RCTSvg.m in Sources */,
 				873769B41B7CD96E00F7C3C2 /* RCTSvgPath.m in Sources */,
-				87D7C4461B7DE8F600D8B42F /* RCTSvgG.m in Sources */,
 				87376A651B7CDAB200F7C3C2 /* GHButton.m in Sources */,
 				87376A5A1B7CDAB200F7C3C2 /* SVGUtilities.m in Sources */,
+				877DC6191B8F748E00C6115B /* RCTSvgGManager.m in Sources */,
 				87D7C43D1B7DE8F600D8B42F /* RCTSvgPathManager.m in Sources */,
 				87D7C4481B7DE8F600D8B42F /* RCTSvgDocumentManager.m in Sources */,
 				87E056E41B8CD58B00E274B2 /* RCTSvgRectManager.m in Sources */,

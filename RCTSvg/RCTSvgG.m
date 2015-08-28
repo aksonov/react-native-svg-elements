@@ -16,38 +16,35 @@
     return self;
 }
 
--(NSDictionary *)objParams {
-    NSDictionary *dict = [self asAttributes];
-    
-    return @{kAttributesElementName : dict, kContentsElementName: children};
-}
+@end
 
-
-
-
-- (void)insertReactSubview:(UIView *)subview atIndex:(NSInteger)atIndex
+@implementation RCTSvgGShadow
+static css_dim_t RCTGMeasure(void *context, float width)
 {
-    [super insertSubview:subview atIndex:atIndex];
+    RCTSvgGShadow *shadowView = (__bridge RCTSvgGShadow *)context;
     
-    // just add them to registry
-    if ([subview isKindOfClass:[RCTSvgElement class]]){
-        NSDictionary *params = [((RCTSvgElement *)subview) objParams];
-        [children addObject:params];
-    }
+//    GHCircle *rect = [[GHCircle alloc] initWithDictionary:[RCTSvgElement objParams:@"circle" object:shadowView]];
+//    [[RCTSvgDynamicRenderer sharedInstace] addObject:rect forKey:shadowView.id];
+//    CGRect bounds = [rect getBoundingBoxWithSVGContext:[RCTSvgDynamicRenderer sharedInstace]];
+    CGSize computedSize = CGSizeMake(400, 400);
+//    CGSize computedSize = CGSizeMake(bounds.size.width+bounds.origin.x+1,bounds.size.height+bounds.origin.y+1);//[layoutManager usedRectForTextContainer:textContainer].size;
+    
+    css_dim_t result;
+    result.dimensions[CSS_WIDTH] = RCTCeilPixelValue(computedSize.width);
+    result.dimensions[CSS_HEIGHT] = RCTCeilPixelValue(computedSize.height);
+    return result;
 }
 
--(id) obj {
-    if (!super.obj){
-        NSDictionary *dict = [self asAttributes];
-        
-        GHShapeGroup *p = [[GHShapeGroup alloc] initWithDictionary:@{kAttributesElementName : dict, kContentsElementName: children}];
-        [super setObj:p];
-    }
-    return super.obj;
+-(void)insertReactSubview:(id<RCTViewNodeProtocol>)subview atIndex:(NSInteger)atIndex {
+    [super insertReactSubview:subview atIndex:atIndex];
+    [children addObject:subview];
 }
+- (void)fillCSSNode:(css_node_t *)node
+{
+    [super fillCSSNode:node];
+    node->measure = RCTGMeasure;
+    node->children_count = 0;
 
-- (void)drawRect:(CGRect)rect {
-//    [super drawRect:rect];
 }
 
 @end

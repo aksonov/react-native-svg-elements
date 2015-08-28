@@ -13,7 +13,7 @@
 - (void)insertReactSubview:(UIView *)subview atIndex:(NSInteger)atIndex
 {
     // will not insert because we don't need to draw them
-    [super insertSubview:subview atIndex:atIndex];
+    //[super insertSubview:subview atIndex:atIndex];
     
     // just add them to registry
     if ([subview isKindOfClass:[RCTSvgElement class]]){
@@ -29,7 +29,6 @@
 
 
 -(id) obj {
-    self.userInteractionEnabled = NO;
     if (!super.obj){
         GHMask *p = [[GHMask alloc] initWithDictionary:[self objParams]];
         [super setObj:p];
