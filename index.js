@@ -382,7 +382,6 @@ class Text extends React.Component {
     render(){
         var scale = this.props.scale;
         var width = this.props.width || dWidth-2*this.props.x*scale-20
-        console.log("WIDTH"+width);
         var color = this.props.fill;
         if (color == 'none'){
             color = 'transparent';
