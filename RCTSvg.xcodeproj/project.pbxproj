@@ -35,8 +35,6 @@
 		87376A6E1B7CDE6A00F7C3C2 /* RCTSvgDynamicRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 87376A6D1B7CDE6A00F7C3C2 /* RCTSvgDynamicRenderer.m */; };
 		877DC60B1B8E0CD700C6115B /* RCTSvgCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 877DC60A1B8E0CD700C6115B /* RCTSvgCircle.m */; };
 		877DC60E1B8E0D6800C6115B /* RCTSvgCircleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 877DC60D1B8E0D6700C6115B /* RCTSvgCircleManager.m */; };
-		877DC6181B8F748E00C6115B /* RCTSvgG.m in Sources */ = {isa = PBXBuildFile; fileRef = 877DC6151B8F748E00C6115B /* RCTSvgG.m */; };
-		877DC6191B8F748E00C6115B /* RCTSvgGManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 877DC6171B8F748E00C6115B /* RCTSvgGManager.m */; };
 		87D7C4241B7DE75200D8B42F /* NSObject+Serialize.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D7C4231B7DE75200D8B42F /* NSObject+Serialize.m */; };
 		87D7C43D1B7DE8F600D8B42F /* RCTSvgPathManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D7C4261B7DE8F600D8B42F /* RCTSvgPathManager.m */; };
 		87D7C43E1B7DE8F600D8B42F /* RCTSvgDefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D7C4281B7DE8F600D8B42F /* RCTSvgDefs.m */; };
@@ -125,10 +123,6 @@
 		877DC60A1B8E0CD700C6115B /* RCTSvgCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTSvgCircle.m; sourceTree = "<group>"; };
 		877DC60C1B8E0D6700C6115B /* RCTSvgCircleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTSvgCircleManager.h; sourceTree = "<group>"; };
 		877DC60D1B8E0D6700C6115B /* RCTSvgCircleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTSvgCircleManager.m; sourceTree = "<group>"; };
-		877DC6141B8F748E00C6115B /* RCTSvgG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTSvgG.h; sourceTree = "<group>"; };
-		877DC6151B8F748E00C6115B /* RCTSvgG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTSvgG.m; sourceTree = "<group>"; };
-		877DC6161B8F748E00C6115B /* RCTSvgGManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTSvgGManager.h; sourceTree = "<group>"; };
-		877DC6171B8F748E00C6115B /* RCTSvgGManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTSvgGManager.m; sourceTree = "<group>"; };
 		87D7C4221B7DE75200D8B42F /* NSObject+Serialize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+Serialize.h"; path = "SVGgh/NSObject+Serialize.h"; sourceTree = "<group>"; };
 		87D7C4231B7DE75200D8B42F /* NSObject+Serialize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Serialize.m"; path = "SVGgh/NSObject+Serialize.m"; sourceTree = "<group>"; };
 		87D7C4251B7DE8F600D8B42F /* RCTSvgPathManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTSvgPathManager.h; sourceTree = "<group>"; };
@@ -225,10 +219,6 @@
 				877DC60A1B8E0CD700C6115B /* RCTSvgCircle.m */,
 				877DC60C1B8E0D6700C6115B /* RCTSvgCircleManager.h */,
 				877DC60D1B8E0D6700C6115B /* RCTSvgCircleManager.m */,
-				877DC6141B8F748E00C6115B /* RCTSvgG.h */,
-				877DC6151B8F748E00C6115B /* RCTSvgG.m */,
-				877DC6161B8F748E00C6115B /* RCTSvgGManager.h */,
-				877DC6171B8F748E00C6115B /* RCTSvgGManager.m */,
 			);
 			path = RCTSvg;
 			sourceTree = "<group>";
@@ -398,7 +388,6 @@
 				87D7C4431B7DE8F600D8B42F /* RCTSvgUseManager.m in Sources */,
 				87376A631B7CDAB200F7C3C2 /* NSData+Base64Additions.m in Sources */,
 				87376A621B7CDAB200F7C3C2 /* Base64Transcoder.m in Sources */,
-				877DC6181B8F748E00C6115B /* RCTSvgG.m in Sources */,
 				87D7C43F1B7DE8F600D8B42F /* RCTSvgDefsManager.m in Sources */,
 				87D7C4451B7DE8F600D8B42F /* RCTSvgMaskManager.m in Sources */,
 				87376A5C1B7CDAB200F7C3C2 /* GHGlyph.m in Sources */,
@@ -426,7 +415,6 @@
 				873769B41B7CD96E00F7C3C2 /* RCTSvgPath.m in Sources */,
 				87376A651B7CDAB200F7C3C2 /* GHButton.m in Sources */,
 				87376A5A1B7CDAB200F7C3C2 /* SVGUtilities.m in Sources */,
-				877DC6191B8F748E00C6115B /* RCTSvgGManager.m in Sources */,
 				87D7C43D1B7DE8F600D8B42F /* RCTSvgPathManager.m in Sources */,
 				87D7C4481B7DE8F600D8B42F /* RCTSvgDocumentManager.m in Sources */,
 				87E056E41B8CD58B00E274B2 /* RCTSvgRectManager.m in Sources */,
