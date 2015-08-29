@@ -108,8 +108,8 @@ class Rect extends React.Component {
             props.y = y;
             return <SVGRect style={{position:'absolute'}} ref="child" {...props}/>;
         } else {
-            props.x = 0;
-            props.y = 0;
+            props.x = "0";
+            props.y = "0";
             return <G scale={props.scale} transform={[{translateX: x}, {translateY: y}]}><SVGRect
                 style={{position:'absolute'}} ref="child" {...props}/></G>;
         }
@@ -265,7 +265,6 @@ class G extends React.Component {
     //
     render() {
         //console.log("G render()");
-        console.log("RENDER, id="+this.props.id);
         var scale = this.props.scale;
         var children = generateChildren(this.props, scale);
 
@@ -294,7 +293,6 @@ class G extends React.Component {
         //    delete styles.right;
         //}
         if (this.props.onPress){
-            console.log("Touchable "+this.props.id);
             return (
                 <TouchableOpacity ref="child" style={styles} {...props}>
                     {children}
@@ -357,8 +355,6 @@ Svg.propTypes = {
     height: PropTypes.number
 };
 
-var SVG = requireNativeComponent('RCTSvg', Svg);
-
 class Image extends React.Component {
     render(){
         var scale = this.props.scale || 1;
@@ -367,7 +363,7 @@ class Image extends React.Component {
 }
 class ClearButton extends React.Component {
     render(){
-        return  <G {...this.props}><Path  {...this.props} d="M699.611165,45.3 L694.644418,40.333253 L693.8,39.4888354 L695.488835,37.8 L696.333253,38.6444177 L701.3,43.6111646 L706.266747,38.6444177 L707.111165,37.8 L708.8,39.4888354 L707.955582,40.333253 L702.988835,45.3 L707.955582,50.266747 L708.8,51.1111646 L707.111165,52.8 L706.266747,51.9555823 L701.3,46.9888354 L696.333253,51.9555823 L695.488835,52.8 L693.8,51.1111646 L694.644418,50.266747 L699.611165,45.3 Z M701,63 C710.941125,63 719,54.9411255 719,45 C719,35.0588745 710.941125,27 701,27 C691.058875,27 683,35.0588745 683,45 C683,54.9411255 691.058875,63 701,63 Z" fill="#D8D8D8"/></G>
+        return  <G {...this.props}><Path  {...this.props} transform="translate(-680,0)" d="M699.611165,45.3 L694.644418,40.333253 L693.8,39.4888354 L695.488835,37.8 L696.333253,38.6444177 L701.3,43.6111646 L706.266747,38.6444177 L707.111165,37.8 L708.8,39.4888354 L707.955582,40.333253 L702.988835,45.3 L707.955582,50.266747 L708.8,51.1111646 L707.111165,52.8 L706.266747,51.9555823 L701.3,46.9888354 L696.333253,51.9555823 L695.488835,52.8 L693.8,51.1111646 L694.644418,50.266747 L699.611165,45.3 Z M701,63 C710.941125,63 719,54.9411255 719,45 C719,35.0588745 710.941125,27 701,27 C691.058875,27 683,35.0588745 683,45 C683,54.9411255 691.058875,63 701,63 Z" fill="#D8D8D8"/></G>
     }
 }
 
@@ -385,25 +381,14 @@ class Text extends React.Component {
 
     render(){
         var scale = this.props.scale;
+        var width = this.props.width || dWidth-2*this.props.x*scale-20
+        console.log("WIDTH"+width);
         var color = this.props.fill;
         if (color == 'none'){
             color = 'transparent';
         }
-        if (this.props.id) {
-            console.log("TEXT "+this.props.id+" "+color);
-        }
         if (this.props.editable){
             var {children, value, ...props} = this.props;
-            //return (
-            //    <React.TextInput
-            //        style={{
-            //        width:100,
-            //            height:40,
-            //            borderWidth:1
-            //        }}
-            //        defaultValue="Hello"/>
-            //);
-            console.log("EDITABLE id="+props.id);
             return (
                 <G scale={scale}>
                 <React.TextInput
@@ -413,7 +398,7 @@ class Text extends React.Component {
                        position:'absolute',
                        color,
                         left:this.props.x*scale,
-                        width:dWidth-2*this.props.x*scale-20,
+                        width:width,
                         height:this.props.fontSize*scale+10,
                         top:this.props.y*scale-this.props.fontSize*scale,
                         fontFamily:this.props.fontFamily,
@@ -423,12 +408,21 @@ class Text extends React.Component {
                         value={this.state.text}
                         onChangeText={this.onChangeText.bind(this)}
                     />
-                    {this.state.showClear ?  <ClearButton onPress={()=>this.onChangeText("")} /> : <View/>}
+                    {this.state.showClear ?  <ClearButton style={{position:'absolute',left:width*scale + 10}} onPress={()=>this.onChangeText("")} /> : <View/>}
 
                     </G>
             );
         } else {
-            return <React.Text {...this.props} style={{position:'absolute', color, top:this.props.y*scale-this.props.fontSize*scale, left:this.props.x*scale, fontSize: this.props.fontSize*scale,fontFamily:this.props.fontFamily,fontWeight:this.props.fontWeight}} />
+            return <React.Text {...this.props}
+                style={[{
+                    position:'absolute',
+                    color,
+                    top:this.props.y*scale-this.props.fontSize*scale,
+                    left:this.props.x*scale,
+                    fontSize: this.props.fontSize*scale,
+                    fontFamily:this.props.fontFamily,
+                    fontWeight:this.props.fontWeight
+                    },this.props.style]} />
         }
     }
 }
