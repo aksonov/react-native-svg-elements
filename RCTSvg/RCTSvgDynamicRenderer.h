@@ -19,5 +19,6 @@
 @property (nonatomic, readwrite) CGRect rect;
 @property (nonatomic, readwrite) float width;
 @property (nonatomic, readwrite) float height;
+@property (nonatomic, readwrite) CGContextRef context;
 
 @end

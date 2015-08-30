@@ -11,10 +11,12 @@
 
 @implementation RCTSvgElement
 
--(id)init {
-    self = [super init];
+-(id)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
     self.contentMode = UIViewContentModeRedraw;
-    self.opaque = NO;
+    self.backgroundColor = [UIColor clearColor];
+    self.x = 0;
+    self.y = 0;
     return self;
 }
 
@@ -39,9 +41,15 @@
 }
 - (void)drawRect:(CGRect)rect {
     CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextTranslateCTM (context, self.y, self.x);
     if ([self.obj conformsToProtocol:@protocol(GHRenderable)]){
         [((id<GHRenderable>)self.obj) renderIntoContext:context withSVGContext:[RCTSvgDynamicRenderer sharedInstace]];
+        
     }
+    
+//    CGAffineTransform transform = CGAffineTransformMakeTranslation(20, 20);
+//    return CGPathCreateCopyByTransformingPath(result, &transform);
+
 }
 
 +(NSDictionary *__nullable)objParams:(NSString *)name object:(id)obj{

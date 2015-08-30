@@ -33,8 +33,12 @@
 		87376A6A1B7CDAB200F7C3C2 /* SVGRendererLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 87376A4F1B7CDAB200F7C3C2 /* SVGRendererLayer.m */; };
 		87376A6B1B7CDAB200F7C3C2 /* SVGTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 87376A511B7CDAB200F7C3C2 /* SVGTabBarItem.m */; };
 		87376A6E1B7CDE6A00F7C3C2 /* RCTSvgDynamicRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 87376A6D1B7CDE6A00F7C3C2 /* RCTSvgDynamicRenderer.m */; };
-		877DC60B1B8E0CD700C6115B /* RCTSvgCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 877DC60A1B8E0CD700C6115B /* RCTSvgCircle.m */; };
-		877DC60E1B8E0D6800C6115B /* RCTSvgCircleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 877DC60D1B8E0D6700C6115B /* RCTSvgCircleManager.m */; };
+		875577F81B92DABB0072D6D4 /* RCTSvgPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = 875577F71B92DABB0072D6D4 /* RCTSvgPolygon.m */; };
+		875577FB1B92DADE0072D6D4 /* RCTSvgPolygonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 875577FA1B92DADE0072D6D4 /* RCTSvgPolygonManager.m */; };
+		877DC60B1B8E0CD700C6115B /* RCTSvgEllipse.m in Sources */ = {isa = PBXBuildFile; fileRef = 877DC60A1B8E0CD700C6115B /* RCTSvgEllipse.m */; };
+		877DC60E1B8E0D6800C6115B /* RCTSvgEllipseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 877DC60D1B8E0D6700C6115B /* RCTSvgEllipseManager.m */; };
+		877DF82D1B931E3600BC6C60 /* RCTSvg.m in Sources */ = {isa = PBXBuildFile; fileRef = 877DF82C1B931E3600BC6C60 /* RCTSvg.m */; };
+		877DF8301B931E8300BC6C60 /* RCTSvgManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 877DF82F1B931E8300BC6C60 /* RCTSvgManager.m */; };
 		87D7C4241B7DE75200D8B42F /* NSObject+Serialize.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D7C4231B7DE75200D8B42F /* NSObject+Serialize.m */; };
 		87D7C43D1B7DE8F600D8B42F /* RCTSvgPathManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D7C4261B7DE8F600D8B42F /* RCTSvgPathManager.m */; };
 		87D7C43E1B7DE8F600D8B42F /* RCTSvgDefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D7C4281B7DE8F600D8B42F /* RCTSvgDefs.m */; };
@@ -119,10 +123,18 @@
 		87376A511B7CDAB200F7C3C2 /* SVGTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVGTabBarItem.m; sourceTree = "<group>"; };
 		87376A6C1B7CDE6A00F7C3C2 /* RCTSvgDynamicRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTSvgDynamicRenderer.h; sourceTree = "<group>"; };
 		87376A6D1B7CDE6A00F7C3C2 /* RCTSvgDynamicRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTSvgDynamicRenderer.m; sourceTree = "<group>"; };
-		877DC6091B8E0CD700C6115B /* RCTSvgCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTSvgCircle.h; sourceTree = "<group>"; };
-		877DC60A1B8E0CD700C6115B /* RCTSvgCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTSvgCircle.m; sourceTree = "<group>"; };
-		877DC60C1B8E0D6700C6115B /* RCTSvgCircleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTSvgCircleManager.h; sourceTree = "<group>"; };
-		877DC60D1B8E0D6700C6115B /* RCTSvgCircleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTSvgCircleManager.m; sourceTree = "<group>"; };
+		875577F61B92DABB0072D6D4 /* RCTSvgPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTSvgPolygon.h; sourceTree = "<group>"; };
+		875577F71B92DABB0072D6D4 /* RCTSvgPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTSvgPolygon.m; sourceTree = "<group>"; };
+		875577F91B92DADE0072D6D4 /* RCTSvgPolygonManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTSvgPolygonManager.h; sourceTree = "<group>"; };
+		875577FA1B92DADE0072D6D4 /* RCTSvgPolygonManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTSvgPolygonManager.m; sourceTree = "<group>"; };
+		877DC6091B8E0CD700C6115B /* RCTSvgEllipse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTSvgEllipse.h; sourceTree = "<group>"; };
+		877DC60A1B8E0CD700C6115B /* RCTSvgEllipse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTSvgEllipse.m; sourceTree = "<group>"; };
+		877DC60C1B8E0D6700C6115B /* RCTSvgEllipseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTSvgEllipseManager.h; sourceTree = "<group>"; };
+		877DC60D1B8E0D6700C6115B /* RCTSvgEllipseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTSvgEllipseManager.m; sourceTree = "<group>"; };
+		877DF82B1B931E3600BC6C60 /* RCTSvg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTSvg.h; sourceTree = "<group>"; };
+		877DF82C1B931E3600BC6C60 /* RCTSvg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTSvg.m; sourceTree = "<group>"; };
+		877DF82E1B931E8300BC6C60 /* RCTSvgManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTSvgManager.h; sourceTree = "<group>"; };
+		877DF82F1B931E8300BC6C60 /* RCTSvgManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTSvgManager.m; sourceTree = "<group>"; };
 		87D7C4221B7DE75200D8B42F /* NSObject+Serialize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+Serialize.h"; path = "SVGgh/NSObject+Serialize.h"; sourceTree = "<group>"; };
 		87D7C4231B7DE75200D8B42F /* NSObject+Serialize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Serialize.m"; path = "SVGgh/NSObject+Serialize.m"; sourceTree = "<group>"; };
 		87D7C4251B7DE8F600D8B42F /* RCTSvgPathManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTSvgPathManager.h; sourceTree = "<group>"; };
@@ -211,14 +223,22 @@
 				87D7C4361B7DE8F600D8B42F /* RCTSvgMaskManager.m */,
 				87D7C43B1B7DE8F600D8B42F /* RCTSvgDocumentManager.h */,
 				87D7C43C1B7DE8F600D8B42F /* RCTSvgDocumentManager.m */,
+				875577F61B92DABB0072D6D4 /* RCTSvgPolygon.h */,
+				875577F71B92DABB0072D6D4 /* RCTSvgPolygon.m */,
+				875577F91B92DADE0072D6D4 /* RCTSvgPolygonManager.h */,
+				877DF82B1B931E3600BC6C60 /* RCTSvg.h */,
+				877DF82C1B931E3600BC6C60 /* RCTSvg.m */,
+				877DF82E1B931E8300BC6C60 /* RCTSvgManager.h */,
+				877DF82F1B931E8300BC6C60 /* RCTSvgManager.m */,
+				875577FA1B92DADE0072D6D4 /* RCTSvgPolygonManager.m */,
 				87E056DF1B8CD4B900E274B2 /* RCTSvgRect.h */,
 				87E056E01B8CD4B900E274B2 /* RCTSvgRect.m */,
 				87E056E21B8CD58B00E274B2 /* RCTSvgRectManager.h */,
 				87E056E31B8CD58B00E274B2 /* RCTSvgRectManager.m */,
-				877DC6091B8E0CD700C6115B /* RCTSvgCircle.h */,
-				877DC60A1B8E0CD700C6115B /* RCTSvgCircle.m */,
-				877DC60C1B8E0D6700C6115B /* RCTSvgCircleManager.h */,
-				877DC60D1B8E0D6700C6115B /* RCTSvgCircleManager.m */,
+				877DC6091B8E0CD700C6115B /* RCTSvgEllipse.h */,
+				877DC60A1B8E0CD700C6115B /* RCTSvgEllipse.m */,
+				877DC60C1B8E0D6700C6115B /* RCTSvgEllipseManager.h */,
+				877DC60D1B8E0D6700C6115B /* RCTSvgEllipseManager.m */,
 			);
 			path = RCTSvg;
 			sourceTree = "<group>";
@@ -383,7 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87376A601B7CDAB200F7C3C2 /* SVGRenderer.m in Sources */,
-				877DC60B1B8E0CD700C6115B /* RCTSvgCircle.m in Sources */,
+				877DC60B1B8E0CD700C6115B /* RCTSvgEllipse.m in Sources */,
 				87376A5E1B7CDAB200F7C3C2 /* SVGPathGenerator.m in Sources */,
 				87D7C4431B7DE8F600D8B42F /* RCTSvgUseManager.m in Sources */,
 				87376A631B7CDAB200F7C3C2 /* NSData+Base64Additions.m in Sources */,
@@ -391,20 +411,23 @@
 				87D7C43F1B7DE8F600D8B42F /* RCTSvgDefsManager.m in Sources */,
 				87D7C4451B7DE8F600D8B42F /* RCTSvgMaskManager.m in Sources */,
 				87376A5C1B7CDAB200F7C3C2 /* GHGlyph.m in Sources */,
+				875577FB1B92DADE0072D6D4 /* RCTSvgPolygonManager.m in Sources */,
 				87376A661B7CDAB200F7C3C2 /* GHControl.m in Sources */,
 				87376A5D1B7CDAB200F7C3C2 /* GHGradient.m in Sources */,
 				87376A521B7CDAB200F7C3C2 /* GHAttributedObject.m in Sources */,
 				87D7C4411B7DE8F600D8B42F /* RCTSvgLinearGradientManager.m in Sources */,
 				87376A691B7CDAB200F7C3C2 /* SVGDocumentView.m in Sources */,
 				87376A591B7CDAB200F7C3C2 /* SVGTextUtilities.m in Sources */,
+				875577F81B92DABB0072D6D4 /* RCTSvgPolygon.m in Sources */,
 				873769B71B7CD98900F7C3C2 /* RCTSvgElement.m in Sources */,
-				877DC60E1B8E0D6800C6115B /* RCTSvgCircleManager.m in Sources */,
+				877DC60E1B8E0D6800C6115B /* RCTSvgEllipseManager.m in Sources */,
 				87D7C43E1B7DE8F600D8B42F /* RCTSvgDefs.m in Sources */,
 				87376A581B7CDAB200F7C3C2 /* SVGParser.m in Sources */,
 				87376A641B7CDAB200F7C3C2 /* GHImageCache.m in Sources */,
 				87E056E11B8CD4B900E274B2 /* RCTSvgRect.m in Sources */,
 				87376A541B7CDAB200F7C3C2 /* GHText.m in Sources */,
 				87D7C4441B7DE8F600D8B42F /* RCTSvgMask.m in Sources */,
+				877DF8301B931E8300BC6C60 /* RCTSvgManager.m in Sources */,
 				87376A551B7CDAB200F7C3C2 /* GHTextLine.m in Sources */,
 				87376A6A1B7CDAB200F7C3C2 /* SVGRendererLayer.m in Sources */,
 				87D7C4401B7DE8F600D8B42F /* RCTSvgLinearGradient.m in Sources */,
@@ -412,6 +435,7 @@
 				87376A6E1B7CDE6A00F7C3C2 /* RCTSvgDynamicRenderer.m in Sources */,
 				87376A671B7CDAB200F7C3C2 /* GHControlFactory.m in Sources */,
 				87376A531B7CDAB200F7C3C2 /* GHPathUtilities.m in Sources */,
+				877DF82D1B931E3600BC6C60 /* RCTSvg.m in Sources */,
 				873769B41B7CD96E00F7C3C2 /* RCTSvgPath.m in Sources */,
 				87376A651B7CDAB200F7C3C2 /* GHButton.m in Sources */,
 				87376A5A1B7CDAB200F7C3C2 /* SVGUtilities.m in Sources */,

@@ -18,6 +18,8 @@
 
 // underlying SVG element (if any) for rendering or future reference
 @property (nonatomic, strong) id __nullable obj;
+@property (nonatomic) float x;
+@property (nonatomic) float y;
 -(void)prepare;
 -(NSDictionary *__nullable)objParams;
 

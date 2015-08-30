@@ -136,13 +136,39 @@ Rect.propTypes = {
 
 var SVGRect = requireNativeComponent('RCTSvgRect', Rect);
 
+class Polygon extends React.Component {
+    setNativeProps(nativeProps) {
+        this.refs.child.setNativeProps(nativeProps);
+    }
+
+    render() {
+        return <SVGPolygon style={{position:'absolute'}} ref="child" {...this.props}/>;
+    }
+}
+
+Polygon.propTypes = {
+    fill: PropTypes.string,
+    stroke: PropTypes.string,
+    strokeWidth: PropTypes.string,
+    strokeMiterLimit: PropTypes.string,
+    points: PropTypes.string,
+    id: PropTypes.string,
+    fillOpacity: PropTypes.string,
+    mask: PropTypes.string,
+    scale: PropTypes.number,
+};
+
+var SVGPolygon = requireNativeComponent('RCTSvgPolygon', Polygon);
+
 class Circle extends React.Component {
     setNativeProps(nativeProps) {
         this.refs.child.setNativeProps(nativeProps);
     }
     render() {
-        return <SVGCircle style={{position:'absolute'}} ref="child" {...this.props}/>;
-//        return <SVGCircle onLayout={this.onLayout} style={{position:'absolute',top:0,left:0,bottom:0,right:0, backgroundColor:'transparent'}} ref="child" {...this.props}/>;
+        var {r, ...props} = this.props;
+        props.rx = r;
+        props.ry = r;
+        return <SVGEllipse style={{position:'absolute'}} ref="child" {...props}/>;
     }
 }
 
@@ -160,7 +186,31 @@ Circle.propTypes = {
     scale: PropTypes.number,
 };
 
-var SVGCircle = requireNativeComponent('RCTSvgCircle', Circle);
+class Ellipse extends React.Component {
+    setNativeProps(nativeProps) {
+        this.refs.child.setNativeProps(nativeProps);
+    }
+    render() {
+        return <SVGEllipse style={{position:'absolute'}} ref="child" {...this.props}/>;
+    }
+}
+
+Ellipse.propTypes = {
+    fill: PropTypes.string,
+    stroke: PropTypes.string,
+    strokeWidth: PropTypes.string,
+    strokeMiterLimit: PropTypes.string,
+    rx: PropTypes.string,
+    ry: PropTypes.string,
+    cx: PropTypes.string,
+    cy: PropTypes.string,
+    id: PropTypes.string,
+    fillOpacity: PropTypes.string,
+    mask: PropTypes.string,
+    scale: PropTypes.number,
+};
+
+var SVGEllipse = requireNativeComponent('RCTSvgEllipse', Ellipse);
 
 class Defs extends React.Component {
     setNativeProps(nativeProps) {
@@ -345,7 +395,9 @@ class Svg extends React.Component {
     render() {
         var scale = dWidth/this.props.width;
         return (
+            <RCTSvg style={{position:'absolute'}} {...this.props}>
             <G style={{position:'absolute'}} {...this.props} scale={scale} onLayout={this.onLayout.bind(this)}/>
+            </RCTSvg>
         );
     }
 }
@@ -354,11 +406,12 @@ Svg.propTypes = {
     width: PropTypes.number,
     height: PropTypes.number
 };
+var RCTSvg = requireNativeComponent('RCTSvg', Svg);
 
 class Image extends React.Component {
     render(){
         var scale = this.props.scale || 1;
-        return <React.Image style={{"position":"absolute","top":this.props.y*scale, left:this.props.x*scale, width:this.props.width*scale, height: this.props.height*scale}} {...this.props}/>
+        return <React.Image style={{"position":"absolute","top":this.props.y*scale, left:this.props.x*scale, width:Math.trunc(this.props.width*scale), height: Math.trunc(this.props.height*scale)}} {...this.props}/>
     }
 }
 class ClearButton extends React.Component {
@@ -426,4 +479,4 @@ class Text extends React.Component {
     }
 }
 
-module.exports = {Use, Stop, Path, Defs, Mask, LinearGradient, G, SvgDocument, Svg, Rect, Image, Text, Circle, ClearButton};
+module.exports = {Use, Stop, Path, Defs, Mask, Polygon, LinearGradient, G, Ellipse, SvgDocument, Svg, Rect, Image, Text, Circle, ClearButton};
