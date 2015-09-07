@@ -50,6 +50,9 @@
 		87D7C4441B7DE8F600D8B42F /* RCTSvgMask.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D7C4341B7DE8F600D8B42F /* RCTSvgMask.m */; };
 		87D7C4451B7DE8F600D8B42F /* RCTSvgMaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D7C4361B7DE8F600D8B42F /* RCTSvgMaskManager.m */; };
 		87D7C4481B7DE8F600D8B42F /* RCTSvgDocumentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D7C43C1B7DE8F600D8B42F /* RCTSvgDocumentManager.m */; };
+		87D7CA2C1B94E56300ACD70D /* RCTSvgImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D7CA2B1B94E56300ACD70D /* RCTSvgImage.m */; };
+		87D7CA2F1B94E58700ACD70D /* RCTSvgImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D7CA2E1B94E58700ACD70D /* RCTSvgImageManager.m */; };
+		87D7CA321B94E73200ACD70D /* BundledGHImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D7CA311B94E73200ACD70D /* BundledGHImage.m */; };
 		87E056E11B8CD4B900E274B2 /* RCTSvgRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E056E01B8CD4B900E274B2 /* RCTSvgRect.m */; };
 		87E056E41B8CD58B00E274B2 /* RCTSvgRectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E056E31B8CD58B00E274B2 /* RCTSvgRectManager.m */; };
 /* End PBXBuildFile section */
@@ -157,6 +160,12 @@
 		87D7C4361B7DE8F600D8B42F /* RCTSvgMaskManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTSvgMaskManager.m; sourceTree = "<group>"; };
 		87D7C43B1B7DE8F600D8B42F /* RCTSvgDocumentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTSvgDocumentManager.h; sourceTree = "<group>"; };
 		87D7C43C1B7DE8F600D8B42F /* RCTSvgDocumentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTSvgDocumentManager.m; sourceTree = "<group>"; };
+		87D7CA2A1B94E56300ACD70D /* RCTSvgImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTSvgImage.h; sourceTree = "<group>"; };
+		87D7CA2B1B94E56300ACD70D /* RCTSvgImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTSvgImage.m; sourceTree = "<group>"; };
+		87D7CA2D1B94E58700ACD70D /* RCTSvgImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTSvgImageManager.h; sourceTree = "<group>"; };
+		87D7CA2E1B94E58700ACD70D /* RCTSvgImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTSvgImageManager.m; sourceTree = "<group>"; };
+		87D7CA301B94E73200ACD70D /* BundledGHImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BundledGHImage.h; sourceTree = "<group>"; };
+		87D7CA311B94E73200ACD70D /* BundledGHImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BundledGHImage.m; sourceTree = "<group>"; };
 		87E056DF1B8CD4B900E274B2 /* RCTSvgRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTSvgRect.h; sourceTree = "<group>"; };
 		87E056E01B8CD4B900E274B2 /* RCTSvgRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTSvgRect.m; sourceTree = "<group>"; };
 		87E056E21B8CD58B00E274B2 /* RCTSvgRectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTSvgRectManager.h; sourceTree = "<group>"; };
@@ -239,6 +248,12 @@
 				877DC60A1B8E0CD700C6115B /* RCTSvgEllipse.m */,
 				877DC60C1B8E0D6700C6115B /* RCTSvgEllipseManager.h */,
 				877DC60D1B8E0D6700C6115B /* RCTSvgEllipseManager.m */,
+				87D7CA2A1B94E56300ACD70D /* RCTSvgImage.h */,
+				87D7CA2B1B94E56300ACD70D /* RCTSvgImage.m */,
+				87D7CA2D1B94E58700ACD70D /* RCTSvgImageManager.h */,
+				87D7CA2E1B94E58700ACD70D /* RCTSvgImageManager.m */,
+				87D7CA301B94E73200ACD70D /* BundledGHImage.h */,
+				87D7CA311B94E73200ACD70D /* BundledGHImage.m */,
 			);
 			path = RCTSvg;
 			sourceTree = "<group>";
@@ -402,6 +417,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87D7CA2C1B94E56300ACD70D /* RCTSvgImage.m in Sources */,
 				87376A601B7CDAB200F7C3C2 /* SVGRenderer.m in Sources */,
 				877DC60B1B8E0CD700C6115B /* RCTSvgEllipse.m in Sources */,
 				87376A5E1B7CDAB200F7C3C2 /* SVGPathGenerator.m in Sources */,
@@ -425,6 +441,7 @@
 				87376A581B7CDAB200F7C3C2 /* SVGParser.m in Sources */,
 				87376A641B7CDAB200F7C3C2 /* GHImageCache.m in Sources */,
 				87E056E11B8CD4B900E274B2 /* RCTSvgRect.m in Sources */,
+				87D7CA2F1B94E58700ACD70D /* RCTSvgImageManager.m in Sources */,
 				87376A541B7CDAB200F7C3C2 /* GHText.m in Sources */,
 				87D7C4441B7DE8F600D8B42F /* RCTSvgMask.m in Sources */,
 				877DF8301B931E8300BC6C60 /* RCTSvgManager.m in Sources */,
@@ -443,6 +460,7 @@
 				87D7C4481B7DE8F600D8B42F /* RCTSvgDocumentManager.m in Sources */,
 				87E056E41B8CD58B00E274B2 /* RCTSvgRectManager.m in Sources */,
 				87376A571B7CDAB200F7C3C2 /* SVGGradientUtilities.m in Sources */,
+				87D7CA321B94E73200ACD70D /* BundledGHImage.m in Sources */,
 				87D7C4241B7DE75200D8B42F /* NSObject+Serialize.m in Sources */,
 				87376A681B7CDAB200F7C3C2 /* GHSegmentedControl.m in Sources */,
 				87D7C4421B7DE8F600D8B42F /* RCTSvgUse.m in Sources */,

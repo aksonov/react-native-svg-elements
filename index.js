@@ -19,6 +19,7 @@ function generateChildren(props, scale){
     var i=0;
     var res=[];
     React.Children.forEach(props.children, function(el) {
+        console.log("Child:"+el.type.name+" "+el.props.id);
         var id = el.props.id;
         if (props.remove && props.remove.indexOf(id)!=-1){
             return;
@@ -369,8 +370,6 @@ G.propTypes = {
     scale: PropTypes.number,
 };
 
-var SVGG = requireNativeComponent('RCTSvgG', G);
-
 
 class SvgDocument extends React.Component {
     setNativeProps(nativeProps) {
@@ -395,9 +394,7 @@ class Svg extends React.Component {
     render() {
         var scale = dWidth/this.props.width;
         return (
-            <RCTSvg style={{position:'absolute'}} {...this.props}>
-            <G style={{position:'absolute'}} {...this.props} scale={scale} onLayout={this.onLayout.bind(this)}/>
-            </RCTSvg>
+            <G style={{position:'absolute',top:0,bottom:0,left:0,right:0}} {...this.props} scale={scale} onLayout={this.onLayout.bind(this)}/>
         );
     }
 }
@@ -409,11 +406,48 @@ Svg.propTypes = {
 var RCTSvg = requireNativeComponent('RCTSvg', Svg);
 
 class Image extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {};
+    }
+    onLoadEnd() {
+        this.setState({source: 1});
+    }
+
     render(){
+        console.log("RENDER Image");
         var scale = this.props.scale || 1;
-        return <React.Image style={{"position":"absolute","top":this.props.y*scale, left:this.props.x*scale, width:Math.trunc(this.props.width*scale), height: Math.trunc(this.props.height*scale)}} {...this.props}/>
+        var {source, x, y, height, width, ...props} = this.props;
+        props._height = height;
+        props._width = width;
+        props._y = y;
+        props._x = x;
+        if (source) {
+           props.xlinkHref = source;
+        }
+        if (this.state.source){
+            props.xlinkHref = this.state.source;
+        }
+        return (
+            <SVGImage scale={scale} style={{"position":"absolute",overflow:'hidden',"top":this.props.y*scale, left:this.props.x*scale, width:Math.trunc(this.props.width*scale), height: Math.trunc(this.props.height*scale)}} {...props}>
+                <React.Image source={source} onLoadEnd={this.onLoadEnd.bind(this)}style={{"position":"absolute","top":this.props.y*scale, left:this.props.x*scale, width:Math.trunc(this.props.width*scale), height: Math.trunc(this.props.height*scale)}} {...this.props} />
+            </SVGImage>
+            );
     }
 }
+Image.propTypes = {
+    xlinkHref: PropTypes.string,
+    _x: PropTypes.string,
+    _y: PropTypes.string,
+    _width: PropTypes.string,
+    _height: PropTypes.string,
+    mask: PropTypes.string,
+    id: PropTypes.string,
+    scale: PropTypes.number,
+};
+var SVGImage = requireNativeComponent('RCTSvgImage', Image);
+
+
 class ClearButton extends React.Component {
     render(){
         return  <G {...this.props}><Path  {...this.props} transform="translate(-680,0)" d="M699.611165,45.3 L694.644418,40.333253 L693.8,39.4888354 L695.488835,37.8 L696.333253,38.6444177 L701.3,43.6111646 L706.266747,38.6444177 L707.111165,37.8 L708.8,39.4888354 L707.955582,40.333253 L702.988835,45.3 L707.955582,50.266747 L708.8,51.1111646 L707.111165,52.8 L706.266747,51.9555823 L701.3,46.9888354 L696.333253,51.9555823 L695.488835,52.8 L693.8,51.1111646 L694.644418,50.266747 L699.611165,45.3 Z M701,63 C710.941125,63 719,54.9411255 719,45 C719,35.0588745 710.941125,27 701,27 C691.058875,27 683,35.0588745 683,45 C683,54.9411255 691.058875,63 701,63 Z" fill="#D8D8D8"/></G>

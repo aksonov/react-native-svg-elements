@@ -17,6 +17,7 @@
 
 -(void)setD:(NSString * __nullable)d {
     _d = d;
+    [self setNeedsDisplay];
 //    super.obj = nil;
 }
 
