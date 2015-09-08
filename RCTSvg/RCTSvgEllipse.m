@@ -10,29 +10,48 @@
 #import "RCTSvgDynamicRenderer.h"
 #import "RCTUtils.h"
 
-@implementation RCTSvgEllipse
+#define distance 100
+
+@implementation RCTSvgEllipse {
+    RCTSvgElement *element;
+}
+
+-(id)init {
+    self = [super init];
+    self.backgroundColor = [UIColor clearColor];
+    return self;
+}
+
 -(NSDictionary *)objParams {
     return [RCTSvgElement objParams:@"ellipse" object:self];
 }
 
-- (void)drawRect:(CGRect)rect {
-    GHEllipse *base = [[GHEllipse alloc] initWithDictionary:[self objParams]];
-    RCTSvgElement *element = [[RCTSvgElement alloc] initWithFrame: self.frame];
-    element.obj = base;
-    element.frame = CGRectMake(-100, -100, self.frame.size.width + 100, self.frame.size.height + 100);
-    element.x = 100;
-    element.y = 100;
-    self.backgroundColor = [UIColor clearColor];
-
-    
-    [self addSubview:element];
-    [super drawRect:rect];
+-(id<GHRenderable>) obj {
+    if (!element){
+        GHEllipse *base = [[GHEllipse alloc] initWithDictionary:[self objParams]];
+        element = [[RCTSvgElement alloc] initWithFrame: self.frame];
+        element.obj = base;
+        element.x = distance;
+        element.y = distance;
+        self.backgroundColor = [UIColor clearColor];
+        
+        
+        [self addSubview:element];
+    }
+    return element.obj;
 }
 
+-(void)layoutSubviews {
+    [super layoutSubviews];
+    if (self.obj){
+        element.frame = CGRectMake(-distance, -distance, self.frame.size.width + distance, self.frame.size.height + distance);
+    }
+
+}
 @end
 
 @implementation RCTSvgEllipseShadow
-static css_dim_t RCTCircleMeasure(void *context, float width)
+static css_dim_t RCTEllipseMeasure(void *context, float width)
 {
     RCTSvgEllipseShadow *shadowView = (__bridge RCTSvgEllipseShadow *)context;
     
@@ -50,7 +69,7 @@ static css_dim_t RCTCircleMeasure(void *context, float width)
 - (void)fillCSSNode:(css_node_t *)node
 {
     [super fillCSSNode:node];
-    node->measure = RCTCircleMeasure;
+    node->measure = RCTEllipseMeasure;
     node->children_count = 0;
 }
 

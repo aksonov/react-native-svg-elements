@@ -10,7 +10,7 @@
 #import "RCTSvgElement.h"
 #import "RCTShadowView.h"
 
-@interface RCTSvgPath : UIView
+@interface RCTSvgPath : UIView<SVGRenderable>
 @property (nonatomic, strong) NSString* __nullable id;
 @property (nonatomic, strong) NSString* __nullable  fill;
 @property (nonatomic, strong) NSString* __nullable  fillOpacity;

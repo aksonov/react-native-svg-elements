@@ -19,7 +19,7 @@ function generateChildren(props, scale){
     var i=0;
     var res=[];
     React.Children.forEach(props.children, function(el) {
-        console.log("Child:"+el.type.name+" "+el.props.id);
+        //console.log("Child:"+el.type.name+" "+el.props.id);
         var id = el.props.id;
         if (props.remove && props.remove.indexOf(id)!=-1){
             return;
@@ -337,12 +337,6 @@ class G extends React.Component {
             position:'absolute',
             transform: transform
         };
-        //if (this.state.width && this.state.height){
-        //    styles.width = this.state.width;
-        //    styles.height = this.state.height;
-        //    delete styles.bottom;
-        //    delete styles.right;
-        //}
         if (this.props.onPress){
             return (
                 <TouchableOpacity ref="child" style={styles} {...props}>
@@ -361,6 +355,7 @@ class G extends React.Component {
 
 G.propTypes = {
     _transform: PropTypes.string,
+    style: PropTypes.any,
     fill: PropTypes.string,
     stroke: PropTypes.string,
     strokeWidth: PropTypes.string,
@@ -401,9 +396,9 @@ class Svg extends React.Component {
 
 Svg.propTypes = {
     width: PropTypes.number,
-    height: PropTypes.number
+    height: PropTypes.number,
+    style: PropTypes.any
 };
-var RCTSvg = requireNativeComponent('RCTSvg', Svg);
 
 class Image extends React.Component {
     constructor(props){
@@ -415,7 +410,6 @@ class Image extends React.Component {
     }
 
     render(){
-        console.log("RENDER Image");
         var scale = this.props.scale || 1;
         var {source, x, y, height, width, ...props} = this.props;
         props._height = height;
@@ -436,11 +430,11 @@ class Image extends React.Component {
     }
 }
 Image.propTypes = {
-    xlinkHref: PropTypes.string,
-    _x: PropTypes.string,
-    _y: PropTypes.string,
-    _width: PropTypes.string,
-    _height: PropTypes.string,
+    xlinkHref: PropTypes.any,
+    _x: PropTypes.number,
+    _y: PropTypes.number,
+    _width: PropTypes.number,
+    _height: PropTypes.number,
     mask: PropTypes.string,
     id: PropTypes.string,
     scale: PropTypes.number,

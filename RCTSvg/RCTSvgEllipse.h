@@ -9,7 +9,7 @@
 #import "RCTSvgElement.h"
 #import "RCTShadowView.h"
 
-@interface RCTSvgEllipse : UIView
+@interface RCTSvgEllipse : UIView<SVGRenderable>
 
 @property (nonatomic, strong) NSString* __nullable id;
 @property (nonatomic, strong) NSString* __nullable  fill;

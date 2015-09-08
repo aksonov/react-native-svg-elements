@@ -20,36 +20,14 @@
     return self;
 }
 
--(void)prepare {
-    if (!self.obj){
-        //
-    }
-}
-
 -(NSDictionary *__nullable)objParams {
     return nil;
 }
 
--(void)setObj:(id __nullable)obj {
-    _obj = obj;
-    if ([obj respondsToSelector:@selector(attributes)]){
-        if ([((NSDictionary *)[obj attributes]) objectForKey:@"id"]){
-            [[RCTSvgDynamicRenderer sharedInstace] addObject:obj forKey:[((NSDictionary *)[obj attributes]) objectForKey:@"id"]];
-        }
-    }
-    
-}
 - (void)drawRect:(CGRect)rect {
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextTranslateCTM (context, self.y, self.x);
-    if ([self.obj conformsToProtocol:@protocol(GHRenderable)]){
-        [((id<GHRenderable>)self.obj) renderIntoContext:context withSVGContext:[RCTSvgDynamicRenderer sharedInstace]];
-        
-    }
-    
-//    CGAffineTransform transform = CGAffineTransformMakeTranslation(20, 20);
-//    return CGPathCreateCopyByTransformingPath(result, &transform);
-
+    [self.obj renderIntoContext:context withSVGContext:[RCTSvgDynamicRenderer sharedInstace]];
 }
 
 +(NSDictionary *__nullable)objParams:(NSString *)name object:(id)obj{

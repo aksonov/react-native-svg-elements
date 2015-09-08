@@ -7,7 +7,7 @@
 //
 
 #import "RCTSvgMask.h"
-
+#import "RCTSvgElement.h"
 @implementation RCTSvgMask
 
 - (void)insertReactSubview:(UIView *)subview atIndex:(NSInteger)atIndex
@@ -16,10 +16,12 @@
     //[super insertSubview:subview atIndex:atIndex];
     
     // just add them to registry
-    if ([subview isKindOfClass:[RCTSvgElement class]]){
-        child = [((RCTSvgElement *)subview) objParams];
+    if ([subview conformsToProtocol:@protocol(SVGRenderable)]){
+        child = [subview performSelector:@selector(objParams)];
     }
-    [self prepare];
+    // register
+    [[RCTSvgDynamicRenderer sharedInstace] addObject:[self obj] forKey:[[self obj] attributes][@"id"]];
+    
 }
 
 -(NSDictionary *)objParams {

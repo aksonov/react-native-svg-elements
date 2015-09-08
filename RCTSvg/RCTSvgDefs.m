@@ -23,9 +23,11 @@
 //    [super insertSubview:subview atIndex:atIndex];
     
     // just add them to registry
-    if ([subview isKindOfClass:[RCTSvgElement class]]){
-        [((RCTSvgElement *)subview) prepare];
+    if ([subview conformsToProtocol:@protocol(SVGRenderable)]){
+        id<SVGRenderable> element = (id<SVGRenderable>)subview;
+        [[RCTSvgDynamicRenderer sharedInstace] addObject:[element obj] forKey:element.id];
     }
+    
 }
 
 @end

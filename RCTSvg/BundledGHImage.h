@@ -10,5 +10,5 @@
 
 @interface BundledGHImage : GHImage
 
--(id)initWithDictionary:(NSDictionary * __nonnull)theAttributes andImageView:(UIImageView *)imageView;
+-(id __nonnull)initWithDictionary:(NSDictionary * __nonnull)theAttributes andImageView:(UIImageView *__nonnull)imageView;
 @end

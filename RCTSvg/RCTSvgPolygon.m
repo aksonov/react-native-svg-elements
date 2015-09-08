@@ -25,7 +25,7 @@
 @end
 
 @implementation RCTSvgPolygonShadow
-static css_dim_t RCTRectMeasure(void *context, float width)
+static css_dim_t RCTPolygonMeasure(void *context, float width)
 {
     RCTSvgPolygonShadow *shadowView = (__bridge RCTSvgPolygonShadow *)context;
     
@@ -43,7 +43,7 @@ static css_dim_t RCTRectMeasure(void *context, float width)
 - (void)fillCSSNode:(css_node_t *)node
 {
     [super fillCSSNode:node];
-    node->measure = RCTRectMeasure;
+    node->measure = RCTPolygonMeasure;
     node->children_count = 0;
 }
 

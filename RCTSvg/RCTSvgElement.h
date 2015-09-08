@@ -14,13 +14,21 @@
 #import "RCTUtils.h"
 #import "RCTShadowView.h"
 
-@interface RCTSvgElement : UIView
+@protocol SVGRenderable <NSObject>
+
+-(id<GHRenderable> __nonnull) obj;
+-(NSDictionary * __nonnull)objParams;
+-(NSString *__nonnull)id;
+@end
+
+
+@interface RCTSvgElement : UIView<SVGRenderable>
 
 // underlying SVG element (if any) for rendering or future reference
-@property (nonatomic, strong) id __nullable obj;
+@property (nonatomic, strong) id<GHRenderable> __nullable obj;
 @property (nonatomic) float x;
 @property (nonatomic) float y;
--(void)prepare;
+@property (nonatomic, strong) NSString * __nullable id;
 -(NSDictionary *__nullable)objParams;
 
 +(NSDictionary *__nullable)objParams:(NSString *__nonnull)name object:(id __nonnull)obj;

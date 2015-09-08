@@ -9,7 +9,28 @@
 #import "RCTSvgPath.h"
 #import "RCTLog.h"
 
-@implementation RCTSvgPath
+const int distance = 100;
+
+@implementation RCTSvgPath {
+    RCTSvgElement *element;
+}
+
+-(id)init {
+    self = [super init];
+    self.backgroundColor = [UIColor clearColor];
+    return self;
+}
+
+-(id<GHRenderable>)obj {
+    if (!element) {
+        element = [[RCTSvgElement alloc] initWithFrame:CGRectZero];
+        element.obj = [[GHPath alloc] initWithDictionary:[self objParams]];
+        element.x = distance;
+        element.y = distance;
+        [self addSubview:element];
+    }
+    return element.obj;
+}
 
 -(NSDictionary *)objParams {
     return [RCTSvgElement objParams:@"path" object:self];
@@ -17,23 +38,22 @@
 
 -(void)setD:(NSString * __nullable)d {
     _d = d;
-    [self setNeedsDisplay];
 //    super.obj = nil;
+    [self setNeedsDisplay];
 }
 
-- (void)drawRect:(CGRect)rect {
-    GHPath *base = [[GHPath alloc] initWithDictionary:[self objParams]];
-    RCTSvgElement *element = [[RCTSvgElement alloc] initWithFrame: self.frame];
-    element.obj = base;
-    element.frame = CGRectMake(-100, -100, self.frame.size.width + 100, self.frame.size.height + 100);
-    element.x = 100;
-    element.y = 100;
-    self.backgroundColor = [UIColor clearColor];
-    
-    
-    [self addSubview:element];
+-(void)layoutSubviews {
+    [super layoutSubviews];
+    if (self.obj){
+        element.frame = CGRectMake(-distance, -distance, self.frame.size.width + distance, self.frame.size.height + distance);
+    }
+}
+
+-(void)drawRect:(CGRect)rect {
     [super drawRect:rect];
 }
+
+
 @end
 
 
