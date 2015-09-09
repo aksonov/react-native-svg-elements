@@ -406,6 +406,7 @@ class Image extends React.Component {
         this.state = {};
     }
     onLoadEnd() {
+        console.log("LOADED!");
         this.setState({source: 1});
     }
 
@@ -424,7 +425,7 @@ class Image extends React.Component {
         }
         return (
             <SVGImage scale={scale} style={{"position":"absolute",overflow:'hidden',"top":this.props.y*scale, left:this.props.x*scale, width:Math.trunc(this.props.width*scale), height: Math.trunc(this.props.height*scale)}} {...props}>
-                <React.Image source={source} onLoadEnd={this.onLoadEnd.bind(this)}style={{"position":"absolute","top":this.props.y*scale, left:this.props.x*scale, width:Math.trunc(this.props.width*scale), height: Math.trunc(this.props.height*scale)}} {...this.props} />
+                <React.Image source={source} resizeMode="cover" onLoadEnd={this.onLoadEnd.bind(this)} style={{"position":"absolute","top":this.props.y*scale, left:this.props.x*scale, width:Math.trunc(this.props.width*scale), height: Math.trunc(this.props.height*scale)}} {...this.props} />
             </SVGImage>
             );
     }

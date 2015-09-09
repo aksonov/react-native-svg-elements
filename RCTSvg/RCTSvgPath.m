@@ -45,7 +45,7 @@ const int distance = 100;
 -(void)layoutSubviews {
     [super layoutSubviews];
     if (self.obj){
-        element.frame = CGRectMake(-distance, -distance, self.frame.size.width + distance, self.frame.size.height + distance);
+        element.frame = CGRectMake(-distance, -distance, self.frame.size.width + 2*distance, self.frame.size.height + 2*distance);
     }
 }
 

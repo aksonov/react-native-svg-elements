@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RCTSvgElement.h"
 
-@interface RCTSvgImage : RCTSvgElement
+@interface RCTSvgImage : RCTSvgElement<SVGRenderable>
 
 @property (nonatomic, strong) NSString*  __nullable  mask;
 @property (nonatomic, strong) NSString*  __nullable  scale;
