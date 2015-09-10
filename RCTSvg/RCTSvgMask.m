@@ -8,7 +8,14 @@
 
 #import "RCTSvgMask.h"
 #import "RCTSvgElement.h"
+#import "RCTSvg.h"
+
 @implementation RCTSvgMask
+
+-(void)setFill:(NSString * __nullable)fill {
+    _fill = fill;
+    // register
+}
 
 - (void)insertReactSubview:(UIView *)subview atIndex:(NSInteger)atIndex
 {
@@ -19,10 +26,15 @@
     if ([subview conformsToProtocol:@protocol(SVGRenderable)]){
         child = [subview performSelector:@selector(objParams)];
     }
-    // register
-    [[RCTSvgDynamicRenderer sharedInstace] addObject:[self obj] forKey:[[self obj] attributes][@"id"]];
     
 }
+
+-(void)setRenderer:(RCTSvgDynamicRenderer * __nullable)renderer {
+    _renderer = renderer;
+    [[RCTSvgDynamicRenderer sharedInstace] addObject:[self obj] forKey:[[self obj] attributes][@"id"]];
+    [renderer addObject:[self obj] forKey:[[self obj] attributes][@"id"]];
+}
+
 
 -(NSDictionary *)objParams {
     NSDictionary *dict = [self asAttributes];
@@ -38,9 +50,6 @@
     return super.obj;
 }
 
--(void)drawRect:(CGRect)rect {
-    [super drawRect:rect];
-}
 
 
 @end

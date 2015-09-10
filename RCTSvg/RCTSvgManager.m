@@ -17,7 +17,7 @@ RCT_EXPORT_MODULE()
     RCTSvg *svg = [[RCTSvg alloc] init];
     return svg;
 }
-RCT_EXPORT_VIEW_PROPERTY(width, float)
-RCT_EXPORT_VIEW_PROPERTY(height, float)
+//RCT_EXPORT_VIEW_PROPERTY(width, float)
+//RCT_EXPORT_VIEW_PROPERTY(height, float)
 
 @end

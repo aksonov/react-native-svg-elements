@@ -9,25 +9,39 @@
 #import "RCTSvgDefs.h"
 #import "RCTSvgElement.h"
 #import "RCTSvgDynamicRenderer.h"
+#import "RCTSvg.h"
 
-@implementation RCTSvgDefs
+@implementation RCTSvgDefs {
+    NSMutableDictionary *varibles;
+}
 
 -(id)init {
     self = [super init];
+    varibles = [NSMutableDictionary dictionary];
     [[RCTSvgDynamicRenderer sharedInstace] clearObjects];
     return self;
 }
 - (void)insertReactSubview:(UIView *)subview atIndex:(NSInteger)atIndex
 {
     // will not insert because we don't need to draw them
+    
 //    [super insertSubview:subview atIndex:atIndex];
     
     // just add them to registry
     if ([subview conformsToProtocol:@protocol(SVGRenderable)]){
         id<SVGRenderable> element = (id<SVGRenderable>)subview;
-        [[RCTSvgDynamicRenderer sharedInstace] addObject:[element obj] forKey:element.id];
+        varibles[element.id] = [element obj];
+        
     }
     
+}
+
+-(void)setRenderer:(RCTSvgDynamicRenderer *)renderer {
+    _renderer = renderer;
+    for (NSString *ident in varibles.allKeys){
+        [_renderer addObject:varibles[ident] forKey:ident];
+        [[RCTSvgDynamicRenderer sharedInstace] addObject:varibles[ident] forKey:ident];
+    }
 }
 
 @end

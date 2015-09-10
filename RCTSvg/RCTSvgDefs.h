@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RCTSvgDynamicRenderer.h"
 
 @interface RCTSvgDefs : UIView {
 }
 
+@property (nonatomic, weak) RCTSvgDynamicRenderer *renderer;
 @end

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RCTSvgElement.h"
 
-@interface RCTSvgRect : RCTSvgElement
+@interface RCTSvgRect : RCTSvgElement<SVGRenderable>
 
 @property (nonatomic, strong) NSString* __nullable id;
 @property (nonatomic, strong) NSString* __nullable  fill;

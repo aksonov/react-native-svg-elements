@@ -8,6 +8,7 @@
 
 #import "RCTSvgElement.h"
 #import "RCTSvgDynamicRenderer.h"
+#import "RCTSvg.h"
 
 @implementation RCTSvgElement
 
@@ -25,9 +26,15 @@
 }
 
 - (void)drawRect:(CGRect)rect {
+    UIView *view = self;
+    while (view.superview && ![view.superview isKindOfClass:[RCTSvg class]]){
+        view = view.superview;
+    }
+    RCTSvg *superview = (RCTSvg *)view.superview;
+    RCTSvgDynamicRenderer *renderer = superview.renderer ? superview.renderer : [RCTSvgDynamicRenderer sharedInstace];
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextTranslateCTM (context, self.y, self.x);
-    [self.obj renderIntoContext:context withSVGContext:[RCTSvgDynamicRenderer sharedInstace]];
+    [self.obj renderIntoContext:context withSVGContext:renderer];
 }
 
 +(NSDictionary *__nullable)objParams:(NSString *)name object:(id)obj{

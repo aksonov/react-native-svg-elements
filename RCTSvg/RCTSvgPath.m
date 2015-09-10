@@ -49,10 +49,6 @@ const int distance = 100;
     }
 }
 
--(void)drawRect:(CGRect)rect {
-    [super drawRect:rect];
-}
-
 
 @end
 

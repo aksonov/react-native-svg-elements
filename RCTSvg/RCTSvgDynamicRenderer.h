@@ -16,6 +16,7 @@
 -(void)addObject:(id __nonnull)object forKey:(NSString *__nonnull)ident;
 -(nullable id)objectNamed:(NSString * __nonnull)objectName;
 -(void)clearObjects;
+-(id __nonnull)initWithDefault;
 @property (nonatomic, readwrite) CGRect rect;
 @property (nonatomic, readwrite) float width;
 @property (nonatomic, readwrite) float height;

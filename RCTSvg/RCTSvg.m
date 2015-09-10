@@ -11,12 +11,25 @@
 
 @implementation RCTSvg
 
-- (void)drawRect:(CGRect)rect {
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    [RCTSvgDynamicRenderer sharedInstace].context = context;
-    [RCTSvgDynamicRenderer sharedInstace].width = self.width;
-    [RCTSvgDynamicRenderer sharedInstace].height = self.height;
-    [super drawRect:rect];
+-(id)init {
+    self = [super init];
+    self.renderer = [[RCTSvgDynamicRenderer alloc] initWithDefault];
+    return self;
+}
+
+-(void)setupRenderer:(UIView *)subview {
+    if ([subview respondsToSelector:@selector(setRenderer:)]){
+        [subview performSelector:@selector(setRenderer:) withObject:self.renderer];
+    }
+    for (UIView *view in subview.subviews){
+        [self setupRenderer:view];
+    }
+}
+
+- (void)insertReactSubview:(UIView *)subview atIndex:(NSInteger)atIndex
+{
+    [self setupRenderer:subview];
+    [super insertSubview:subview atIndex:atIndex];
 }
 
 @end

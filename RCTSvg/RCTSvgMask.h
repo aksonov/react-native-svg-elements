@@ -18,5 +18,6 @@
 @property (nonatomic, strong) NSString* __nullable  scale;
 @property (nonatomic, strong) NSString* __nullable  stroke;
 @property (nonatomic, strong) NSString* __nullable  strokeWidth;
+@property (nonatomic, weak) RCTSvgDynamicRenderer* __nullable renderer;
 
 @end

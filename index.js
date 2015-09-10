@@ -383,13 +383,19 @@ SvgDocument.propTypes = {
 var SVGDocument = requireNativeComponent('RCTSvgDocument', SvgDocument);
 
 class Svg extends React.Component {
+    setNativeProps(nativeProps) {
+        this.refs.child.setNativeProps(nativeProps);
+    }
+
     onLayout(event){
         //console.log("onLayout "+JSON.stringify(event.nativeEvent.layout));
     }
     render() {
         var scale = dWidth/this.props.width;
+        var children = generateChildren(this.props, scale);
+        var {width, height, ...props} = this.props;
         return (
-            <G style={{position:'absolute',top:0,bottom:0,left:0,right:0}} {...this.props} scale={scale} onLayout={this.onLayout.bind(this)}/>
+            <SVG ref="child" style={{position:'absolute',backgroundColor:'transparent',top:0,bottom:0,left:0,right:0}} {...props} scale={scale} onLayout={this.onLayout.bind(this)}>{children}</SVG>
         );
     }
 }
@@ -399,6 +405,7 @@ Svg.propTypes = {
     height: PropTypes.number,
     style: PropTypes.any
 };
+var SVG = requireNativeComponent('RCTSvg', Svg);
 
 class Image extends React.Component {
     constructor(props){
@@ -406,7 +413,7 @@ class Image extends React.Component {
         this.state = {};
     }
     onLoadEnd() {
-        console.log("LOADED!");
+//        console.log("LOADED!");
         this.setState({source: 1});
     }
 
@@ -422,10 +429,15 @@ class Image extends React.Component {
         }
         if (this.state.source){
             props.xlinkHref = this.state.source;
+        } else {
+            props.xlinkHref = '2';
         }
+        //return (
+        //        <React.Image source={source} resizeMode="cover" onLoadEnd={this.onLoadEnd.bind(this)} style={{"position":"absolute","top":this.props.y*scale, left:this.props.x*scale, width:Math.trunc(this.props.width*scale), height: Math.trunc(this.props.height*scale)}} {...this.props} />
+        //);
         return (
-            <SVGImage scale={scale} style={{"position":"absolute",overflow:'hidden',"top":this.props.y*scale, left:this.props.x*scale, width:Math.trunc(this.props.width*scale), height: Math.trunc(this.props.height*scale)}} {...props}>
-                <React.Image source={source} resizeMode="cover" onLoadEnd={this.onLoadEnd.bind(this)} style={{"position":"absolute","top":this.props.y*scale, left:this.props.x*scale, width:Math.trunc(this.props.width*scale), height: Math.trunc(this.props.height*scale)}} {...this.props} />
+            <SVGImage scale={scale} style={{"position":"absolute",overflow:'hidden',"top":Math.trunc(this.props.y*scale), left:Math.trunc(this.props.x*scale), width:Math.trunc(this.props.width*scale), height: Math.trunc(this.props.height*scale)}} {...props}>
+                <React.Image source={source} resizeMode="cover" onLoadEnd={this.onLoadEnd.bind(this)} style={{flex:1}} {...this.props} />
             </SVGImage>
             );
     }

@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "RCTSvgDynamicRenderer.h"
 @interface RCTSvg : UIView
 
-@property (nonatomic, readwrite) float width;
-@property (nonatomic, readwrite) float height;
-
+//@property (nonatomic, readwrite) float width;
+//@property (nonatomic, readwrite) float height;
+@property (nonatomic, strong) RCTSvgDynamicRenderer *renderer;
 @end
