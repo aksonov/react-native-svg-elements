@@ -44,10 +44,15 @@ static css_dim_t RCTUseMeasure(void *context, float width)
     
     dict[@"xlink:href"] = shadowView.xlinkHref;
     GHRenderableObjectPlaceholder *rect = [[GHRenderableObjectPlaceholder alloc] initWithAttributes:dict];
+    float scale = 1;
+    if (shadowView.scale){
+        scale = [shadowView.scale floatValue];
+    }
     id<GHRenderable> myConcrete = [rect concreteObjectForSVGContext:[RCTSvgDynamicRenderer sharedInstace] excludingPrevious:nil];
     
     CGRect bounds = [myConcrete getBoundingBoxWithSVGContext:[RCTSvgDynamicRenderer sharedInstace]];
-    CGSize computedSize = CGSizeMake(bounds.size.width+bounds.origin.x,bounds.size.height+bounds.origin.y);//[layoutManager usedRectForTextContainer:textContainer].size;
+    CGSize computedSize = CGSizeMake(bounds.size.width*scale,bounds.size.height*scale);//[layoutManager usedRectForTextContainer:textContainer].size;
+//    CGSize computedSize = CGSizeMake(bounds.size.width+bounds.origin.x,bounds.size.height+bounds.origin.y);//[layoutManager usedRectForTextContainer:textContainer].size;
     
     css_dim_t result;
     result.dimensions[CSS_WIDTH] = RCTCeilPixelValue(computedSize.width);

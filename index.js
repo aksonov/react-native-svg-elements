@@ -436,8 +436,7 @@ class Image extends React.Component {
         //        <React.Image source={source} resizeMode="cover" onLoadEnd={this.onLoadEnd.bind(this)} style={{"position":"absolute","top":this.props.y*scale, left:this.props.x*scale, width:Math.trunc(this.props.width*scale), height: Math.trunc(this.props.height*scale)}} {...this.props} />
         //);
         return (
-            <SVGImage scale={scale} style={{"position":"absolute",overflow:'hidden',"top":Math.trunc(this.props.y*scale), left:Math.trunc(this.props.x*scale), width:Math.trunc(this.props.width*scale), height: Math.trunc(this.props.height*scale)}} {...props}>
-                <React.Image source={source} resizeMode="cover" onLoadEnd={this.onLoadEnd.bind(this)} style={{flex:1}} {...this.props} />
+            <SVGImage scale={scale}  {...props} style={{"position":"absolute",overflow:'hidden',"top":Math.trunc(this.props.y*scale+2*scale), left:Math.trunc(this.props.x*scale+2*scale), width:Math.trunc(this.props.width*scale-4*scale), height: Math.trunc(this.props.height*scale-4*scale)}}><React.Image  {...this.props} source={source} resizeMode="cover" onLoadEnd={this.onLoadEnd.bind(this)} style={{flex:1}}/>
             </SVGImage>
             );
     }
@@ -473,9 +472,13 @@ class Text extends React.Component {
         }
     }
 
+    componentWillReceiveProps(props){
+        this.setState({text:props.value});
+    }
+
     render(){
         var scale = this.props.scale;
-        var width = this.props.width || dWidth-2*this.props.x*scale-20
+        var width = this.props.width || dWidth-this.props.x-10;
         var color = this.props.fill;
         if (color == 'none'){
             color = 'transparent';
@@ -501,7 +504,7 @@ class Text extends React.Component {
                         value={this.state.text}
                         onChangeText={this.onChangeText.bind(this)}
                     />
-                    {this.state.showClear ?  <ClearButton style={{position:'absolute',left:width*scale + 10}} onPress={()=>this.onChangeText("")} /> : <View/>}
+                    {this.state.showClear ?  <ClearButton style={{position:'absolute',left:width*0.5 + 5}} onPress={()=>this.onChangeText("")} /> : <View/>}
 
                     </G>
             );
