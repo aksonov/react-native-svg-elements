@@ -478,7 +478,7 @@ class Text extends React.Component {
 
     render(){
         var scale = this.props.scale;
-        var width = this.props.width || dWidth-this.props.x-10;
+        var width = this.props.width || dWidth/scale-this.props.x-10;
         var color = this.props.fill;
         if (color == 'none'){
             color = 'transparent';
@@ -490,21 +490,22 @@ class Text extends React.Component {
                 <React.TextInput
                     onFocus={()=>this.setState({showClear: true})}
                     onBlur={()=>this.setState({showClear: false})}
-                    style={{
+                     {...props}
+                    style={[{
                        position:'absolute',
                        color,
                         left:this.props.x*scale,
-                        width:width,
+                        width:width*scale-20,
                         height:this.props.fontSize*scale+10,
                         top:this.props.y*scale-this.props.fontSize*scale,
                         fontFamily:this.props.fontFamily,
                         fontSize:this.props.fontSize*scale,
                         fontWeight:this.props.fontWeight
-                    }} placeholder={children} {...props}
+                    },props.style]} placeholder={children}
                         value={this.state.text}
                         onChangeText={this.onChangeText.bind(this)}
                     />
-                    {this.state.showClear ?  <ClearButton style={{position:'absolute',left:width*0.5 + 5}} onPress={()=>this.onChangeText("")} /> : <View/>}
+                    {this.state.showClear ?  <ClearButton style={{position:'absolute',top:this.props.y*scale*0.5 - this.props.fontSize*scale*0.5 - 6 , left:(this.props.x*scale+width*scale)*0.5-10}} onPress={()=>this.onChangeText("")} /> : <View/>}
 
                     </G>
             );
