@@ -17,6 +17,7 @@ const int distance = 100;
 
 -(id)init {
     self = [super init];
+    self.contentMode = UIViewContentModeRedraw;
     self.backgroundColor = [UIColor clearColor];
     return self;
 }
@@ -38,8 +39,11 @@ const int distance = 100;
 
 -(void)setD:(NSString * __nullable)d {
     _d = d;
-//    super.obj = nil;
-    [self setNeedsDisplay];
+    if (element){
+        [element removeFromSuperview];
+        element = nil;
+    }
+    [self setNeedsLayout];
 }
 
 -(void)layoutSubviews {

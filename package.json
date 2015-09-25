@@ -1,6 +1,6 @@
 {
   "name": "react-native-svg-elements",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "ReactNative SVG elements using SVGgh library",
   "main": "index.js",
   "scripts": {
@@ -28,7 +28,7 @@
   "readme": "# React Native SVG Elements\nUse React Native to draw SVG Elements.\n\n## Supported SVG Elements\n- Path\n- Use\n- Defs\n- Mask\n- LinearGradient\n- G\n\n##Example\nDraw Sine function\n```js\n'use strict';\n\nfunction drawSine(t) {\n  var path = `M ${0} ${Math.sin(t) * 100 + 120}`;\n  var x, y;\n\n  for (var i = 0; i <= 10; i += 0.5) {\n    x = i * 50;\n    y = Math.sin(t + x) * 100 + 120;\n    path = path + ` L ${x} ${y}`\n  }\n\n  return path;\n}\n\n\nvar React = require('react-native');\nvar {\n  StyleSheet,\n  Text,\n  View,\n} = React;\n\nvar {Svg, Path} = require('react-native-svg-elements');\nvar TimerMixin = require('react-timer-mixin');\n\nvar Wave = React.createClass({\n  mixins: [TimerMixin],\n\n  getInitialState() {\n    return {t: 0}\n  },\n\n  componentDidMount() {\n    this.setInterval(this.updateTime, 16);\n  },\n\n  updateTime() {\n    this.setState({t: this.state.t + 0.05});\n  },\n\n  render() {\n    return (\n      <View style={{flex: 1, backgroundColor: 'black', justifyContent: 'center', alignItems: 'center'}}>\n        <Svg width={500} height={500} style={{width: 320, height: 350}}\n             forceUpdate={this.state.t.toString()}>\n          <Path fill=\"none\" stroke=\"#00D8FF\" strokeWidth=\"3\" strokeMiterlimit=\"10\"\n                d={drawSine(this.state.t)} />\n        </Svg>\n      </View>\n    );\n  }\n});\n\n```\n\n## Getting started\n1. `npm install react-native-svg-elements --save`\n2. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`\n3. add `./node_modules/react-native-svg-elements/RCTSvg.xcodeproj`\n4. In the XCode project navigator, select your project, select the `Build Phases` tab and in the `Link Binary With Libraries` section add **libRCTSvg.a**\n5. `var Svg = require('react-native-svg-elements'); var Path = Svg.Path`\n\n## Todo\n- [ ] Support <Rect>\n- [ ] Support <Text>\n\n## Credits\nThanks to @GenerallyHelpfulSoftware for SVG rendering library (https://github.com/GenerallyHelpfulSoftware/SVGgh).\nThanks to @brentvatne for React Native SVG library (https://github.com/brentvatne/react-native-svg) examples given from.\n",
   "readmeFilename": "README.md",
   "gitHead": "b3fbadad32579009cc5626dd43b8fc44fd81577b",
-  "_id": "react-native-svg-elements@0.0.15",
-  "_shasum": "a186bfbf6dfcef5173fe99b4ff44860f8b0677a5",
-  "_from": "react-native-svg-elements@>=0.0.15 <0.0.16"
+  "_id": "react-native-svg-elements@0.0.16",
+  "_shasum": "87502677baf42cdd921f35259cc37b1547e7babd",
+  "_from": "react-native-svg-elements@0.0.16"
 }
