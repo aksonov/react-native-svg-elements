@@ -25,7 +25,7 @@ RCT_EXPORT_VIEW_PROPERTY(id, NSString)
 RCT_EXPORT_VIEW_PROPERTY(fill, NSString)
 RCT_EXPORT_VIEW_PROPERTY(fillOpacity, NSString)
 RCT_EXPORT_VIEW_PROPERTY(mask, NSString)
-RCT_EXPORT_VIEW_PROPERTY(scale, NSString)
+RCT_EXPORT_VIEW_PROPERTY(scale, float)
 
 - (RCTShadowView *)shadowView {
     RCTSvgPolygonShadow *svg = [[RCTSvgPolygonShadow alloc] init];
@@ -39,7 +39,7 @@ RCT_EXPORT_SHADOW_PROPERTY(id, NSString)
 RCT_EXPORT_SHADOW_PROPERTY(fill, NSString)
 RCT_EXPORT_SHADOW_PROPERTY(fillOpacity, NSString)
 RCT_EXPORT_SHADOW_PROPERTY(mask, NSString)
-RCT_EXPORT_SHADOW_PROPERTY(scale, NSString)
+RCT_EXPORT_SHADOW_PROPERTY(scale, float)
 
 
 @end

@@ -55,7 +55,7 @@ Use.propTypes = {
     fillOpacity: PropTypes.string,
     mask: PropTypes.string,
     id: PropTypes.string,
-    scale: PropTypes.string,
+    scale: PropTypes.number,
 };
 var SVGUse = requireNativeComponent('RCTSvgUse', Use);
 
@@ -89,7 +89,7 @@ Path.propTypes = {
     fillOpacity: PropTypes.string,
     mask: PropTypes.string,
     _transform: PropTypes.string,
-    scale: PropTypes.string,
+    scale: PropTypes.number,
 };
 
 var SVGPath = requireNativeComponent('RCTSvgPath', Path);
@@ -131,9 +131,8 @@ Rect.propTypes = {
     _height: PropTypes.string,
     id: PropTypes.string,
     fillOpacity: PropTypes.string,
-    opacity: PropTypes.string,
     mask: PropTypes.string,
-    scale: PropTypes.string,
+    scale: PropTypes.number,
 };
 
 var SVGRect = requireNativeComponent('RCTSvgRect', Rect);
@@ -157,7 +156,7 @@ Polygon.propTypes = {
     id: PropTypes.string,
     fillOpacity: PropTypes.string,
     mask: PropTypes.string,
-    scale: PropTypes.string,
+    scale: PropTypes.number,
 };
 
 var SVGPolygon = requireNativeComponent('RCTSvgPolygon', Polygon);
@@ -185,7 +184,7 @@ Circle.propTypes = {
     id: PropTypes.string,
     fillOpacity: PropTypes.string,
     mask: PropTypes.string,
-    scale: PropTypes.string,
+    scale: PropTypes.number,
 };
 
 class Ellipse extends React.Component {
@@ -209,7 +208,7 @@ Ellipse.propTypes = {
     id: PropTypes.string,
     fillOpacity: PropTypes.string,
     mask: PropTypes.string,
-    scale: PropTypes.string,
+    scale: PropTypes.number,
 };
 
 var SVGEllipse = requireNativeComponent('RCTSvgEllipse', Ellipse);
@@ -251,7 +250,7 @@ Mask.propTypes = {
     strokeMiterLimit: PropTypes.string,
     id: PropTypes.string,
     fillOpacity: PropTypes.string,
-    scale: PropTypes.string,
+    scale: PropTypes.number,
 };
 var SVGMask = requireNativeComponent('RCTSvgMask', Mask);
 
@@ -363,7 +362,7 @@ G.propTypes = {
     strokeMiterLimit: PropTypes.string,
     id: PropTypes.string,
     fillOpacity: PropTypes.string,
-    scale: PropTypes.string,
+    scale: PropTypes.number,
 };
 
 
@@ -393,7 +392,7 @@ class Svg extends React.Component {
     }
     render() {
         var scale = dWidth/this.props.width;
-        var children = generateChildren(this.props, `${scale}`);
+        var children = generateChildren(this.props, scale);
         var {width, height, ...props} = this.props;
         return (
             <SVG ref="child" style={{position:'absolute',backgroundColor:'transparent',top:0,bottom:0,left:0,right:0}} {...props} scale={scale} onLayout={this.onLayout.bind(this)}>{children}</SVG>
@@ -409,55 +408,22 @@ Svg.propTypes = {
 var SVG = requireNativeComponent('RCTSvg', Svg);
 
 class Image extends React.Component {
-    componentWillReceiveProps(props){
-        this.setState({source: props.source});
-    }
-
-    constructor(props){
-        super(props);
-        this.state = {source: props.source};
-    }
-    onLoadEnd() {
-        this.setState({sourceTemp: "1"});
-    }
-
     render(){
         var scale = this.props.scale || 1;
-        var {source, x, y, height, width, ...props} = this.props;
-        props._height = height + "";
-        props._width = width + "";
-        props._y = y + "";
-        props._x = x + "";
-        source = this.state.source;
-        if (source) {
-           props.xlinkHref = source;
-        }
-        if (this.state.sourceTemp){
-            props.xlinkHref = this.state.sourceTemp;
-        } else {
-            props.xlinkHref = '2';
-        }
         return (
             <React.Image  {...this.props} style={{"position":"absolute",overflow:'hidden',"top":Math.trunc(this.props.y*scale+2*scale), left:Math.trunc(this.props.x*scale+2*scale), width:Math.trunc(this.props.width*scale-4*scale), height: Math.trunc(this.props.height*scale-4*scale)}}/>
-            );
-        return (
-            <SVGImage scale={scale}  {...props} style={{"position":"absolute",overflow:'hidden',"top":Math.trunc(this.props.y*scale+2*scale), left:Math.trunc(this.props.x*scale+2*scale), width:Math.trunc(this.props.width*scale-4*scale), height: Math.trunc(this.props.height*scale-4*scale)}}>
-                <React.Image  {...this.props} source={source} onLoadEnd={this.onLoadEnd.bind(this)}/>
-            </SVGImage>
-            );
-    }
+        );    }
 }
 Image.propTypes = {
     xlinkHref: PropTypes.any,
-    _x: PropTypes.string,
-    _y: PropTypes.string,
-    _width: PropTypes.string,
-    _height: PropTypes.string,
+    _x: PropTypes.number,
+    _y: PropTypes.number,
+    _width: PropTypes.number,
+    _height: PropTypes.number,
     mask: PropTypes.string,
     id: PropTypes.string,
-    scale: PropTypes.string,
+    scale: PropTypes.number,
 };
-var SVGImage = requireNativeComponent('RCTSvgImage', Image);
 
 
 class ClearButton extends React.Component {

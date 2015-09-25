@@ -37,8 +37,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/node_modules/react-native-svg-elements/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="91" column="39" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.21037868">
+              <caret line="102" column="20" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -46,12 +46,6 @@
       </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/node_modules/react-native-svg-elements/README.md">
-          <provider editor-type-id="MultiMarkdownHtmlEditor">
-            <state />
-          </provider>
-          <provider editor-type-id="MultiMarkdownPreviewEditor">
-            <state />
-          </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="64" column="6" selection-start-line="64" selection-start-column="6" selection-end-line="64" selection-end-column="6" />
@@ -64,8 +58,10 @@
         <entry file="file://$PROJECT_DIR$/node_modules/react-native/Libraries/ReactNative/ReactNative.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="91" column="2" selection-start-line="91" selection-start-column="2" selection-end-line="91" selection-end-column="2" />
-              <folding />
+              <caret line="95" column="2" selection-start-line="95" selection-start-column="2" selection-end-line="95" selection-end-column="2" />
+              <folding>
+                <marker date="1441093364000" expanded="true" signature="3706:3708" placeholder="{&quot;hasReactNativeInitialized&quot;: false...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,18 +70,10 @@
         <entry file="file://$PROJECT_DIR$/node_modules/react-native/Libraries/react-native/react-native.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="85" column="34" selection-start-line="85" selection-start-column="34" selection-end-line="85" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cloneWithProps.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/react-native/node_modules/react-tools/src/utils/cloneWithProps.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="47" />
-              <folding />
+              <caret line="87" column="34" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="34" />
+              <folding>
+                <marker date="1443120236000" expanded="true" signature="636:3203" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -95,7 +83,13 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="57" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-              <folding />
+              <folding>
+                <marker date="1440582428000" expanded="true" signature="1401:3149" placeholder="&lt;xml/&gt;" />
+                <marker date="1440582428000" expanded="true" signature="1510:3130" placeholder="&lt;xml/&gt;" />
+                <marker date="1440582428000" expanded="true" signature="1551:1970" placeholder="&lt;xml/&gt;" />
+                <marker date="1440582428000" expanded="true" signature="1991:2106" placeholder="&lt;xml/&gt;" />
+                <marker date="1440582428000" expanded="true" signature="2726:3109" placeholder="&lt;xml/&gt;" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -121,8 +115,8 @@
       <list>
         <option value="$PROJECT_DIR$/index.ios.js" />
         <option value="$PROJECT_DIR$/Wave.js" />
-        <option value="$PROJECT_DIR$/node_modules/react-native-svg-elements/index.js" />
         <option value="$PROJECT_DIR$/node_modules/react-native-svg-elements/README.md" />
+        <option value="$PROJECT_DIR$/node_modules/react-native-svg-elements/index.js" />
       </list>
     </option>
   </component>
@@ -134,10 +128,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="41" />
+    <option name="x" value="55" />
     <option name="y" value="23" />
-    <option name="width" value="1239" />
-    <option name="height" value="697" />
+    <option name="width" value="1865" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -162,8 +156,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -309,17 +303,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="41" y="23" width="1239" height="697" extended-state="0" />
+    <frame x="55" y="23" width="1865" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16584565" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1654013" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23305786" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23212436" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -327,6 +320,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -351,7 +345,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="91" column="2" selection-start-line="91" selection-start-column="2" selection-end-line="91" selection-end-column="2" />
-          <folding />
+          <folding>
+            <marker date="1441093364000" expanded="true" signature="3706:3708" placeholder="{&quot;hasReactNativeInitialized&quot;: false...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -359,15 +355,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="85" column="34" selection-start-line="85" selection-start-column="34" selection-end-line="85" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-native/node_modules/react-tools/src/utils/cloneWithProps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="47" />
-          <folding />
+          <folding>
+            <marker date="1443120236000" expanded="true" signature="636:3203" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -375,7 +365,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
-          <folding />
+          <folding>
+            <marker date="1440582428000" expanded="true" signature="1401:3149" placeholder="&lt;xml/&gt;" />
+            <marker date="1440582428000" expanded="true" signature="1510:3130" placeholder="&lt;xml/&gt;" />
+            <marker date="1440582428000" expanded="true" signature="1551:1970" placeholder="&lt;xml/&gt;" />
+            <marker date="1440582428000" expanded="true" signature="1991:2106" placeholder="&lt;xml/&gt;" />
+            <marker date="1440582428000" expanded="true" signature="2726:3109" placeholder="&lt;xml/&gt;" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -411,12 +407,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/react-native-svg-elements/README.md">
-      <provider editor-type-id="MultiMarkdownHtmlEditor">
-        <state />
-      </provider>
-      <provider editor-type-id="MultiMarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="64" column="6" selection-start-line="64" selection-start-column="6" selection-end-line="64" selection-end-column="6" />
@@ -428,7 +418,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="91" column="2" selection-start-line="91" selection-start-column="2" selection-end-line="91" selection-end-column="2" />
-          <folding />
+          <folding>
+            <marker date="1441093364000" expanded="true" signature="3706:3708" placeholder="{&quot;hasReactNativeInitialized&quot;: false...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -436,15 +428,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="85" column="34" selection-start-line="85" selection-start-column="34" selection-end-line="85" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-native/node_modules/react-tools/src/utils/cloneWithProps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="47" />
-          <folding />
+          <folding>
+            <marker date="1443120236000" expanded="true" signature="636:3203" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -452,7 +438,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
-          <folding />
+          <folding>
+            <marker date="1440582428000" expanded="true" signature="1401:3149" placeholder="&lt;xml/&gt;" />
+            <marker date="1440582428000" expanded="true" signature="1510:3130" placeholder="&lt;xml/&gt;" />
+            <marker date="1440582428000" expanded="true" signature="1551:1970" placeholder="&lt;xml/&gt;" />
+            <marker date="1440582428000" expanded="true" signature="1991:2106" placeholder="&lt;xml/&gt;" />
+            <marker date="1440582428000" expanded="true" signature="2726:3109" placeholder="&lt;xml/&gt;" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -488,12 +480,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/react-native-svg-elements/README.md">
-      <provider editor-type-id="MultiMarkdownHtmlEditor">
-        <state />
-      </provider>
-      <provider editor-type-id="MultiMarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="64" column="6" selection-start-line="64" selection-start-column="6" selection-end-line="64" selection-end-column="6" />
@@ -505,7 +491,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="91" column="2" selection-start-line="91" selection-start-column="2" selection-end-line="91" selection-end-column="2" />
-          <folding />
+          <folding>
+            <marker date="1441093364000" expanded="true" signature="3706:3708" placeholder="{&quot;hasReactNativeInitialized&quot;: false...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -513,15 +501,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="85" column="34" selection-start-line="85" selection-start-column="34" selection-end-line="85" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-native/node_modules/react-tools/src/utils/cloneWithProps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="47" />
-          <folding />
+          <folding>
+            <marker date="1443120236000" expanded="true" signature="636:3203" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -529,84 +511,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Wave.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding>
-            <marker date="1439557802000" expanded="true" signature="713:1093" placeholder="&lt;xml/&gt;" />
-            <marker date="1439557802000" expanded="true" signature="820:1079" placeholder="&lt;xml/&gt;" />
-            <marker date="1439557802000" expanded="true" signature="946:1064" placeholder="&lt;xml/&gt;" />
+            <marker date="1440582428000" expanded="true" signature="1401:3149" placeholder="&lt;xml/&gt;" />
+            <marker date="1440582428000" expanded="true" signature="1510:3130" placeholder="&lt;xml/&gt;" />
+            <marker date="1440582428000" expanded="true" signature="1551:1970" placeholder="&lt;xml/&gt;" />
+            <marker date="1440582428000" expanded="true" signature="1991:2106" placeholder="&lt;xml/&gt;" />
+            <marker date="1440582428000" expanded="true" signature="2726:3109" placeholder="&lt;xml/&gt;" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/ContactList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1438156028000" expanded="true" signature="237:623" placeholder="&lt;xml/&gt;" />
-            <marker date="1438156028000" expanded="true" signature="329:579" placeholder="&lt;xml/&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-native-svg-elements/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="62" column="36" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-native-svg-elements/README.md">
-      <provider editor-type-id="MultiMarkdownHtmlEditor">
-        <state />
-      </provider>
-      <provider editor-type-id="MultiMarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-native/Libraries/ReactNative/ReactNative.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="91" column="2" selection-start-line="91" selection-start-column="2" selection-end-line="91" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-native/Libraries/react-native/react-native.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="85" column="34" selection-start-line="85" selection-start-column="34" selection-end-line="85" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-native/node_modules/react-tools/src/utils/cloneWithProps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.ios.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -644,6 +555,79 @@
     <entry file="file://$PROJECT_DIR$/node_modules/react-native-svg-elements/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react-native/Libraries/ReactNative/ReactNative.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="91" column="2" selection-start-line="91" selection-start-column="2" selection-end-line="91" selection-end-column="2" />
+          <folding>
+            <marker date="1441093364000" expanded="true" signature="3706:3708" placeholder="{&quot;hasReactNativeInitialized&quot;: false...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react-native/Libraries/react-native/react-native.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="85" column="34" selection-start-line="85" selection-start-column="34" selection-end-line="85" selection-end-column="34" />
+          <folding>
+            <marker date="1443120236000" expanded="true" signature="636:3203" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.ios.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
+          <folding>
+            <marker date="1440582428000" expanded="true" signature="1401:3149" placeholder="&lt;xml/&gt;" />
+            <marker date="1440582428000" expanded="true" signature="1510:3130" placeholder="&lt;xml/&gt;" />
+            <marker date="1440582428000" expanded="true" signature="1551:1970" placeholder="&lt;xml/&gt;" />
+            <marker date="1440582428000" expanded="true" signature="1991:2106" placeholder="&lt;xml/&gt;" />
+            <marker date="1440582428000" expanded="true" signature="2726:3109" placeholder="&lt;xml/&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Wave.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="53" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding>
+            <marker date="1439557802000" expanded="true" signature="713:1093" placeholder="&lt;xml/&gt;" />
+            <marker date="1439557802000" expanded="true" signature="820:1079" placeholder="&lt;xml/&gt;" />
+            <marker date="1439557802000" expanded="true" signature="946:1064" placeholder="&lt;xml/&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/ContactList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1438156028000" expanded="true" signature="237:623" placeholder="&lt;xml/&gt;" />
+            <marker date="1438156028000" expanded="true" signature="329:579" placeholder="&lt;xml/&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react-native-svg-elements/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="62" column="36" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react-native-svg-elements/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="64" column="6" selection-start-line="64" selection-start-column="6" selection-end-line="64" selection-end-column="6" />
           <folding />
         </state>
@@ -653,7 +637,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="91" column="2" selection-start-line="91" selection-start-column="2" selection-end-line="91" selection-end-column="2" />
-          <folding />
+          <folding>
+            <marker date="1441093364000" expanded="true" signature="3706:3708" placeholder="{&quot;hasReactNativeInitialized&quot;: false...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -661,15 +647,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="85" column="34" selection-start-line="85" selection-start-column="34" selection-end-line="85" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-native/node_modules/react-tools/src/utils/cloneWithProps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="47" />
-          <folding />
+          <folding>
+            <marker date="1443120236000" expanded="true" signature="636:3203" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -677,7 +657,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
-          <folding />
+          <folding>
+            <marker date="1440582428000" expanded="true" signature="1401:3149" placeholder="&lt;xml/&gt;" />
+            <marker date="1440582428000" expanded="true" signature="1510:3130" placeholder="&lt;xml/&gt;" />
+            <marker date="1440582428000" expanded="true" signature="1551:1970" placeholder="&lt;xml/&gt;" />
+            <marker date="1440582428000" expanded="true" signature="1991:2106" placeholder="&lt;xml/&gt;" />
+            <marker date="1440582428000" expanded="true" signature="2726:3109" placeholder="&lt;xml/&gt;" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -723,7 +709,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="86" selection-start-line="4" selection-start-column="86" selection-end-line="4" selection-end-column="86" />
-          <folding />
+          <folding>
+            <marker date="1440582428000" expanded="true" signature="1401:3149" placeholder="&lt;xml/&gt;" />
+            <marker date="1440582428000" expanded="true" signature="1510:3130" placeholder="&lt;xml/&gt;" />
+            <marker date="1440582428000" expanded="true" signature="1551:1970" placeholder="&lt;xml/&gt;" />
+            <marker date="1440582428000" expanded="true" signature="1991:2106" placeholder="&lt;xml/&gt;" />
+            <marker date="1440582428000" expanded="true" signature="2726:3109" placeholder="&lt;xml/&gt;" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -757,26 +749,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-native/node_modules/react-tools/src/utils/cloneWithProps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/react-native/Libraries/react-native/react-native.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="85" column="34" selection-start-line="85" selection-start-column="34" selection-end-line="85" selection-end-column="34" />
-          <folding />
+          <caret line="87" column="34" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="34" />
+          <folding>
+            <marker date="1443120236000" expanded="true" signature="636:3203" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/react-native/Libraries/ReactNative/ReactNative.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="91" column="2" selection-start-line="91" selection-start-column="2" selection-end-line="91" selection-end-column="2" />
+          <caret line="95" column="2" selection-start-line="95" selection-start-column="2" selection-end-line="95" selection-end-column="2" />
+          <folding>
+            <marker date="1441093364000" expanded="true" signature="3706:3708" placeholder="{&quot;hasReactNativeInitialized&quot;: false...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react-native-svg-elements/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="64" column="6" selection-start-line="64" selection-start-column="6" selection-end-line="64" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.ios.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="57" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding>
+            <marker date="1440582428000" expanded="true" signature="1401:3149" placeholder="&lt;xml/&gt;" />
+            <marker date="1440582428000" expanded="true" signature="1510:3130" placeholder="&lt;xml/&gt;" />
+            <marker date="1440582428000" expanded="true" signature="1551:1970" placeholder="&lt;xml/&gt;" />
+            <marker date="1440582428000" expanded="true" signature="1991:2106" placeholder="&lt;xml/&gt;" />
+            <marker date="1440582428000" expanded="true" signature="2726:3109" placeholder="&lt;xml/&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react-native-svg-elements/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21037868">
+          <caret line="102" column="20" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -790,36 +808,6 @@
             <marker date="1439557802000" expanded="true" signature="820:1079" placeholder="&lt;xml/&gt;" />
             <marker date="1439557802000" expanded="true" signature="946:1064" placeholder="&lt;xml/&gt;" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-native-svg-elements/README.md">
-      <provider editor-type-id="MultiMarkdownHtmlEditor">
-        <state />
-      </provider>
-      <provider editor-type-id="MultiMarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="64" column="6" selection-start-line="64" selection-start-column="6" selection-end-line="64" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.ios.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="57" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-native-svg-elements/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="91" column="39" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>

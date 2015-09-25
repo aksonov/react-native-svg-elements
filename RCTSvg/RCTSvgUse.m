@@ -17,7 +17,7 @@
     
     dict[@"xlink:href"] = self.xlinkHref;
     if (self.scale){
-        dict[@"transform"] = [NSString stringWithFormat:@"scale(%@)", self.scale];
+        dict[@"transform"] = [NSString stringWithFormat:@"scale(%f)", self.scale];
     }
     return @{kAttributesElementName: dict, kElementName: @"use"};
 }
@@ -46,7 +46,7 @@ static css_dim_t RCTUseMeasure(void *context, float width)
     GHRenderableObjectPlaceholder *rect = [[GHRenderableObjectPlaceholder alloc] initWithAttributes:dict];
     float scale = 1;
     if (shadowView.scale){
-        scale = [shadowView.scale floatValue];
+        scale = shadowView.scale;
     }
     id<GHRenderable> myConcrete = [rect concreteObjectForSVGContext:[RCTSvgDynamicRenderer sharedInstace] excludingPrevious:nil];
     
