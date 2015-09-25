@@ -14,6 +14,7 @@
 @property (nonatomic, strong) NSString* __nullable id;
 @property (nonatomic, strong) NSString* __nullable  fill;
 @property (nonatomic, strong) NSString* __nullable  fillOpacity;
+@property (nonatomic, strong) NSString* __nullable  opacity;
 @property (nonatomic, strong) NSString* __nullable  fillRule;
 @property (nonatomic, strong) NSString*  __nullable  mask;
 @property (nonatomic) float  scale;
@@ -29,6 +30,7 @@
 @interface RCTSvgPathShadow : RCTShadowView
 @property (nonatomic, strong) NSString* __nullable id;
 @property (nonatomic, strong) NSString* __nullable  fill;
+@property (nonatomic, strong) NSString* __nullable  opacity;
 @property (nonatomic, strong) NSString* __nullable  fillOpacity;
 @property (nonatomic, strong) NSString* __nullable  fillRule;
 @property (nonatomic, strong) NSString*  __nullable  mask;

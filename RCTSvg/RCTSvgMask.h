@@ -15,7 +15,7 @@
 @property (nonatomic, strong) NSString* __nullable id;
 @property (nonatomic, strong) NSString* __nullable  fill;
 @property (nonatomic, strong) NSString* __nullable  fillOpacity;
-@property (nonatomic, strong) NSString* __nullable  scale;
+@property (nonatomic) float scale;
 @property (nonatomic, strong) NSString* __nullable  stroke;
 @property (nonatomic, strong) NSString* __nullable  strokeWidth;
 @property (nonatomic, weak) RCTSvgDynamicRenderer* __nullable renderer;
