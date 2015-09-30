@@ -70,7 +70,7 @@ class Path extends React.Component {
         if (transform)
             props._transform = transform;
         if (props.onPress){
-            return <TouchableOpacity onPress={()=>props.onPress()}><SVGPath ref="child" style={{position:'absolute'}}  {...props}  /></TouchableOpacity>;
+            return <TouchableOpacity onPress={props.onPress}><SVGPath ref="child" style={{position:'absolute'}}  {...props}  /></TouchableOpacity>;
         } else {
             return <SVGPath ref="child" pointerEvents="none" style={{position:'absolute'}}  {...props}  />;
         }
@@ -87,7 +87,6 @@ Path.propTypes = {
     d: PropTypes.string,
     id: PropTypes.string,
     fillOpacity: PropTypes.string,
-    opacity: PropTypes.string,
     mask: PropTypes.string,
     _transform: PropTypes.string,
     scale: PropTypes.number,
@@ -132,6 +131,7 @@ Rect.propTypes = {
     _height: PropTypes.string,
     id: PropTypes.string,
     fillOpacity: PropTypes.string,
+    opacity: PropTypes.string,
     mask: PropTypes.string,
     scale: PropTypes.number,
 };
@@ -340,7 +340,7 @@ class G extends React.Component {
         };
         if (this.props.onPress){
             return (
-                <TouchableOpacity ref="child" style={styles} {...props} onPress={()=>this.props.onPress()}>
+                <TouchableOpacity ref="child" style={styles} {...props}>
                     {children}
                 </TouchableOpacity>
             );

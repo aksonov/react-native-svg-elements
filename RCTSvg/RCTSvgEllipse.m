@@ -44,7 +44,7 @@
 -(void)layoutSubviews {
     [super layoutSubviews];
     if (self.obj){
-        element.frame = CGRectMake(-distance, -distance, self.frame.size.width + distance, self.frame.size.height + distance);
+        element.frame = CGRectMake(-distance, -distance, self.frame.size.width + 2*distance, self.frame.size.height + 2*distance);
     }
 
 }
@@ -58,7 +58,7 @@ static css_dim_t RCTEllipseMeasure(void *context, float width)
     GHEllipse *rect = [[GHEllipse alloc] initWithDictionary:[RCTSvgElement objParams:@"ellipse" object:shadowView]];
     [[RCTSvgDynamicRenderer sharedInstace] addObject:rect forKey:shadowView.id];
     CGRect bounds = [rect getBoundingBoxWithSVGContext:[RCTSvgDynamicRenderer sharedInstace]];
-    CGSize computedSize = CGSizeMake(bounds.size.width+bounds.origin.x,bounds.size.height+bounds.origin.y);//[layoutManager usedRectForTextContainer:textContainer].size;
+    CGSize computedSize = CGSizeMake(bounds.size.width+bounds.origin.x+1,bounds.size.height+bounds.origin.y+1);//[layoutManager usedRectForTextContainer:textContainer].size;
     
     css_dim_t result;
     result.dimensions[CSS_WIDTH] = RCTCeilPixelValue(computedSize.width);

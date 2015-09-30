@@ -30,5 +30,5 @@
   "gitHead": "b3fbadad32579009cc5626dd43b8fc44fd81577b",
   "_id": "react-native-svg-elements@0.0.17",
   "_shasum": "ea8eff599f7eef951c8f02367d556a6cf072a76c",
-  "_from": "react-native-svg-elements@0.0.17"
+  "_from": "react-native-svg-elements@>=0.0.17 <0.0.18"
 }

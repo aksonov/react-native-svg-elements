@@ -12,7 +12,6 @@
     NSDictionary *child;
 }
 
-@property (nonatomic, strong) NSString* __nullable id;
 @property (nonatomic, strong) NSString* __nullable  fill;
 @property (nonatomic, strong) NSString* __nullable  fillOpacity;
 @property (nonatomic) float scale;
