@@ -1,6 +1,6 @@
 {
   "name": "react-native-svg-elements",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "ReactNative SVG elements using SVGgh library",
   "main": "index.js",
   "scripts": {
