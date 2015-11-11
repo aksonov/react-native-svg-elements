@@ -457,7 +457,7 @@ class Text extends React.Component {
             color = 'transparent';
         }
         if (this.props.editable){
-            var {children, value, ...props} = this.props;
+            var {children, value, fontSize, fontWeight, fontFamily, ...props} = this.props;
             return (
                 <G scale={scale}>
                 <React.TextInput
